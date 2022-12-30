@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaHistory } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 import AddFoodItem from "./AddFoodItem";
 
-const Dashboard = ({ userDetails, setIsSignedIn }) => {
+const Dashboard = ({
+  userDetails,
+  setIsSignedIn,
+  setCurrentData,
+  setAllEnteredData,
+}) => {
   const [addFoodItem, setAddFoodItem] = useState(false);
   const navigate = useNavigate();
   const auth = getAuth();
+
+  useEffect(() => {
+    setCurrentData({});
+    setAllEnteredData({});
+  }, []);
+
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
@@ -49,6 +60,8 @@ const Dashboard = ({ userDetails, setIsSignedIn }) => {
             className="w-1/3 shadow-lg h-full border-2 rounded-2xl cursor-pointer hover:scale-105 hover:bg-slate-100 flex flex-col justify-center items-center"
             onClick={() => {
               navigate("/main");
+              setCurrentData({});
+              setAllEnteredData({});
             }}
           >
             <img src="/assets/meals.png" alt="meals" className="w-full" />
@@ -62,6 +75,8 @@ const Dashboard = ({ userDetails, setIsSignedIn }) => {
             className="w-1/3 shadow-lg h-full border-2 rounded-2xl cursor-pointer hover:scale-105 hover:bg-slate-100 flex flex-col justify-center items-center space-y-3"
             onClick={() => {
               navigate("/history");
+              setCurrentData({});
+              setAllEnteredData({});
             }}
           >
             <FaHistory size={220} />

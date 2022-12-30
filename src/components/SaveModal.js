@@ -3,6 +3,8 @@ import { getDatabase, ref, set, child, push } from "firebase/database";
 import { useNavigate } from "react-router-dom";
 
 const SaveModal = ({
+  setCurrentData,
+  setAllEnteredData,
   setShowModal,
   currentData,
   uid,
@@ -53,6 +55,8 @@ const SaveModal = ({
       const UIDsuid = push(child(ref(db), "UIDs")).key;
       set(ref(db, `UIDs/${UIDsuid}`), uid);
       navigate("/dashboard");
+      setAllEnteredData({});
+      setCurrentData({});
     } else {
       setError(true);
     }

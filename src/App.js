@@ -111,6 +111,10 @@ function App() {
             <Dashboard
               userDetails={userDetails}
               setIsSignedIn={setIsSignedIn}
+              setCurrentData={setCurrentData}
+              currentData={currentData}
+              allEnteredData={allEnteredData}
+              setAllEnteredData={setAllEnteredData}
             />
           </Protected>
         }

@@ -345,6 +345,8 @@ const MainScreen = ({
       {showModal ? (
         <SaveModal
           setShowModal={setShowModal}
+          setCurrentData={setCurrentData}
+          setAllEnteredData={setAllEnteredData}
           currentData={currentData}
           uid={uid}
           height={height}

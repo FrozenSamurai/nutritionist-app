@@ -94,9 +94,13 @@ const History = ({ userDetails, userCred }) => {
   return (
     <div className="w-full flex flex-col items-center mt-10">
       <h1 className="text-3xl font-semibold">History</h1>
-      <div className="w-5/6">
-        <DataTable columns={columns} data={rows} progressPending={loading} />
-      </div>
+      {rows.length > 0 ? (
+        <div className="w-5/6">
+          <DataTable columns={columns} data={rows} progressPending={loading} />
+        </div>
+      ) : (
+        <h1 className="text-2xl text-center w-full">No Data</h1>
+      )}
     </div>
   );
 };
