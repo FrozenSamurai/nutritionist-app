@@ -1,0 +1,1764 @@
+{
+  "nutrients": {
+    "Bajra": {
+      "amount": 30,
+      "energy": 104,
+      "protein": 3.3,
+      "carbs": 18.5,
+      "fats": 1.6,
+      "fibre": 3.4,
+      "calcium": 8.2,
+      "iron": 1.9
+    },
+    "Ragi": {
+      "amount": 30,
+      "energy": 96,
+      "protein": 2.1,
+      "carbs": 20,
+      "fats": 0.6,
+      "fibre": 3.3,
+      "calcium": 109,
+      "iron": 1.4
+    },
+    "Barley": {
+      "amount": 30,
+      "energy": 95,
+      "protein": 3.3,
+      "carbs": 18.4,
+      "fats": 0.4,
+      "fibre": 4.7,
+      "calcium": 8.6,
+      "iron": 0.5
+    },
+    "Jowar": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 3,
+      "carbs": 20.3,
+      "fats": 0.5,
+      "fibre": 3,
+      "calcium": 8.3,
+      "iron": 1.2
+    },
+    "Maize (dry)": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 2.6,
+      "carbs": 19.4,
+      "fats": 1.1,
+      "fibre": 3.7,
+      "calcium": 2.8,
+      "iron": 0.7
+    },
+    "Maize tender local": {
+      "amount": 30,
+      "energy": 36,
+      "protein": 1,
+      "carbs": 6.8,
+      "fats": 0.4,
+      "fibre": 1,
+      "calcium": 1.9,
+      "iron": 0.2
+    },
+    "Maize sweet tender": {
+      "amount": 30,
+      "energy": 29,
+      "protein": 1.2,
+      "carbs": 5,
+      "fats": 0.4,
+      "fibre": 1,
+      "calcium": 1.9,
+      "iron": 0.1
+    },
+    "Wheat": {
+      "amount": 30,
+      "energy": 97,
+      "protein": 3.2,
+      "carbs": 19.4,
+      "fats": 0.4,
+      "fibre": 3.4,
+      "calcium": 11.8,
+      "iron": 1.2
+    },
+    "Wheat flour whole": {
+      "amount": 30,
+      "energy": 96,
+      "protein": 3.2,
+      "carbs": 19.3,
+      "fats": 0.5,
+      "fibre": 3.4,
+      "calcium": 9.3,
+      "iron": 1.2
+    },
+    "Maida": {
+      "amount": 30,
+      "energy": 106,
+      "protein": 3.1,
+      "carbs": 22.3,
+      "fats": 0.2,
+      "fibre": 0.8,
+      "calcium": 6.1,
+      "iron": 0.5
+    },
+    "Rawa": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 3.4,
+      "carbs": 20.5,
+      "fats": 0.2,
+      "fibre": 2.9,
+      "calcium": 8.8,
+      "iron": 0.9
+    },
+    "Daliya": {
+      "amount": 30,
+      "energy": 103,
+      "protein": 3.3,
+      "carbs": 20.7,
+      "fats": 0.4,
+      "fibre": 2.6,
+      "calcium": 8.1,
+      "iron": 1.2
+    },
+    "Vermicelli": {
+      "amount": 30,
+      "energy": 102,
+      "protein": 3.1,
+      "carbs": 21.4,
+      "fats": 0.2,
+      "fibre": 2.9,
+      "calcium": 6.8,
+      "iron": 0.6
+    },
+    "Brown rice": {
+      "amount": 30,
+      "energy": 106,
+      "protein": 2.8,
+      "carbs": 22.4,
+      "fats": 0.4,
+      "fibre": 1.3,
+      "calcium": 3.3,
+      "iron": 0.3
+    },
+    "Rice parboiled milled": {
+      "amount": 30,
+      "energy": 106,
+      "protein": 2.3,
+      "carbs": 23.2,
+      "fats": 0.2,
+      "fibre": 1.1,
+      "calcium": 2.4,
+      "iron": 0.2
+    },
+    "Rice raw milled": {
+      "amount": 30,
+      "energy": 107,
+      "protein": 2.4,
+      "carbs": 23.5,
+      "fats": 0.2,
+      "fibre": 0.8,
+      "calcium": 2.5,
+      "iron": 0.2
+    },
+    "Rice flakes": {
+      "amount": 30,
+      "energy": 106,
+      "protein": 2.2,
+      "carbs": 23,
+      "fats": 0.3,
+      "fibre": 1,
+      "calcium": 2.7,
+      "iron": 1.3
+    },
+    "Rice puff": {
+      "amount": 30,
+      "energy": 109,
+      "protein": 2.2,
+      "carbs": 23.3,
+      "fats": 0.5,
+      "fibre": 1.8,
+      "calcium": 4.5,
+      "iron": 1.4
+    },
+    "Quinoa": {
+      "amount": 30,
+      "energy": 98,
+      "protein": 3.9,
+      "carbs": 16,
+      "fats": 1.6,
+      "fibre": 4.4,
+      "calcium": 59.4,
+      "iron": 2.2
+    },
+    "Bengal gram dal": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 7,
+      "carbs": 17,
+      "fats": 0.5,
+      "fibre": 4.5,
+      "calcium": 13.9,
+      "iron": 1.8
+    },
+    "Bengal gram whole": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 7,
+      "carbs": 17,
+      "fats": 0.5,
+      "fibre": 7.5,
+      "calcium": 45,
+      "iron": 2.04
+    },
+    "Black gram dal": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 7,
+      "carbs": 17,
+      "fats": 0.5,
+      "fibre": 3.6,
+      "calcium": 16.7,
+      "iron": 1.4
+    },
+    "Black gram whole": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 7,
+      "carbs": 17,
+      "fats": 0.5,
+      "fibre": 6.1,
+      "calcium": 25.8,
+      "iron": 1.8
+    },
+    "Cowpea white": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 7,
+      "carbs": 17,
+      "fats": 0.5,
+      "fibre": 3.5,
+      "calcium": 25.2,
+      "iron": 1.5
+    },
+    "Green gram whole": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 7,
+      "carbs": 17,
+      "fats": 0.5,
+      "fibre": 5.1,
+      "calcium": 27.7,
+      "iron": 1.4
+    },
+    "Green gram dal": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 7,
+      "carbs": 17,
+      "fats": 0.5,
+      "fibre": 2.8,
+      "calcium": 12.9,
+      "iron": 1.1
+    },
+    "Lentil dal": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 7,
+      "carbs": 17,
+      "fats": 0.5,
+      "fibre": 3.1,
+      "calcium": 13.2,
+      "iron": 2.1
+    },
+    "Lentil whole": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 7,
+      "carbs": 17,
+      "fats": 0.5,
+      "fibre": 5,
+      "calcium": 22.8,
+      "iron": 2.2
+    },
+    "Peas dry": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 7,
+      "carbs": 17,
+      "fats": 0.5,
+      "fibre": 4.5,
+      "calcium": 22.5,
+      "iron": 1.5
+    },
+    "Rajma": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 7,
+      "carbs": 17,
+      "fats": 0.5,
+      "fibre": 5,
+      "calcium": 40.2,
+      "iron": 1.8
+    },
+    "Tur dal": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 7,
+      "carbs": 17,
+      "fats": 0.5,
+      "fibre": 5.1,
+      "calcium": 17.1,
+      "iron": 0.9
+    },
+    "Soyabean": {
+      "amount": 23,
+      "energy": 100,
+      "protein": 10,
+      "carbs": 5,
+      "fats": 4.5,
+      "fibre": 4.9,
+      "calcium": 54.9,
+      "iron": 1.9
+    },
+    "Soya chuncks": {
+      "amount": 30,
+      "energy": 104,
+      "protein": 16,
+      "carbs": 10,
+      "fats": 0,
+      "fibre": 4,
+      "calcium": 105,
+      "iron": 6
+    },
+    "Almond": {
+      "amount": 15,
+      "energy": 91,
+      "protein": 2.8,
+      "carbs": 0.5,
+      "fats": 8.8,
+      "fibre": 2,
+      "calcium": 40,
+      "iron": 40
+    },
+    "Cashew nut": {
+      "amount": 15,
+      "energy": 87,
+      "protein": 2.8,
+      "carbs": 3.8,
+      "fats": 6.8,
+      "fibre": 0.6,
+      "calcium": 5.55,
+      "iron": 43.8
+    },
+    "Coconut dry": {
+      "amount": 15,
+      "energy": 94,
+      "protein": 1,
+      "carbs": 1.2,
+      "fats": 9.5,
+      "fibre": 2.4,
+      "calcium": 3,
+      "iron": 1
+    },
+    "Coconut fresh": {
+      "amount": 25,
+      "energy": 102,
+      "protein": 1,
+      "carbs": 1.6,
+      "fats": 10.3,
+      "fibre": 2.6,
+      "calcium": 5,
+      "iron": 0.36
+    },
+    "Garden cress seed": {
+      "amount": 15,
+      "energy": 67,
+      "protein": 3.5,
+      "carbs": 5,
+      "fats": 3.5,
+      "fibre": 1.2,
+      "calcium": 12.5,
+      "iron": 0.19
+    },
+    "Gingelly black seed": {
+      "amount": 15,
+      "energy": 76,
+      "protein": 2.9,
+      "carbs": 1.5,
+      "fats": 6.5,
+      "fibre": 2.6,
+      "calcium": 13.2,
+      "iron": 0.88
+    },
+    "Gingelly white seed": {
+      "amount": 15,
+      "energy": 78,
+      "protein": 3.3,
+      "carbs": 1.5,
+      "fats": 6.5,
+      "fibre": 2.5,
+      "calcium": 146.2,
+      "iron": 2.18
+    },
+    "Groundnut": {
+      "amount": 15,
+      "energy": 78,
+      "protein": 3.5,
+      "carbs": 2.6,
+      "fats": 6,
+      "fibre": 1.5,
+      "calcium": 13.8,
+      "iron": 0.7
+    },
+    "Pistachio nut": {
+      "amount": 15,
+      "energy": 80,
+      "protein": 3.5,
+      "carbs": 2.4,
+      "fats": 6.4,
+      "fibre": 1.6,
+      "calcium": 19.6,
+      "iron": 0.5
+    },
+    "Safflower seed": {
+      "amount": 15,
+      "energy": 71,
+      "protein": 2.6,
+      "carbs": 4.5,
+      "fats": 4.6,
+      "fibre": 2,
+      "calcium": 11.7,
+      "iron": 0.73
+    },
+    "Sunflower seed": {
+      "amount": 15,
+      "energy": 88,
+      "protein": 3.5,
+      "carbs": 1,
+      "fats": 7.8,
+      "fibre": 1.6,
+      "calcium": 11.7,
+      "iron": 0.78
+    },
+    "Walnut": {
+      "amount": 15,
+      "energy": 100,
+      "protein": 2.2,
+      "carbs": 1.5,
+      "fats": 9.6,
+      "fibre": 0.8,
+      "calcium": 14.7,
+      "iron": 0.4
+    },
+    "Linseed (flaxseed)": {
+      "amount": 15,
+      "energy": 67,
+      "protein": 2.8,
+      "carbs": 1.6,
+      "fats": 5.4,
+      "fibre": 3.9,
+      "calcium": 38.2,
+      "iron": 58.8
+    },
+    "Milk (C)": {
+      "amount": 150,
+      "energy": 100,
+      "protein": 5,
+      "carbs": 7,
+      "fats": 6,
+      "fibre": 0,
+      "calcium": 118,
+      "iron": 0.15
+    },
+    "Milk (B)": {
+      "amount": 85,
+      "energy": 100,
+      "protein": 3.5,
+      "carbs": 4,
+      "fats": 5.5,
+      "fibre": 0,
+      "calcium": 121,
+      "iron": 0.16
+    },
+    "Skim Milk Powder": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 11,
+      "carbs": 15,
+      "fats": 0,
+      "fibre": 0,
+      "calcium": 240,
+      "iron": 0
+    },
+    "Whole milk Powder": {
+      "amount": 20,
+      "energy": 100,
+      "protein": 5,
+      "carbs": 8,
+      "fats": 5.5,
+      "fibre": 0,
+      "calcium": 275,
+      "iron": 0
+    },
+    "Khoa": {
+      "amount": 25,
+      "energy": 100,
+      "protein": 3.5,
+      "carbs": 5,
+      "fats": 8,
+      "fibre": 0,
+      "calcium": 240.8,
+      "iron": 0.92
+    },
+    "Cheese": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 7,
+      "carbs": 2,
+      "fats": 7.5,
+      "fibre": 0,
+      "calcium": 103,
+      "iron": 0
+    },
+    "Paneer": {
+      "amount": 40,
+      "energy": 103,
+      "protein": 7.6,
+      "carbs": 5.7,
+      "fats": 5.9,
+      "fibre": 0,
+      "calcium": 190.4,
+      "iron": 0.36
+    },
+    "Low fat milk": {
+      "amount": 150,
+      "energy": 53,
+      "protein": 5.2,
+      "carbs": 7.5,
+      "fats": 0.1,
+      "fibre": 0,
+      "calcium": 0,
+      "iron": 0
+    },
+    "Skim milk": {
+      "amount": 150,
+      "energy": 75,
+      "protein": 5.6,
+      "carbs": 10,
+      "fats": 0.4,
+      "fibre": 0,
+      "calcium": 0,
+      "iron": 0
+    },
+    "DT milk": {
+      "amount": 150,
+      "energy": 70,
+      "protein": 4.9,
+      "carbs": 7.5,
+      "fats": 2.2,
+      "fibre": 0,
+      "calcium": 0,
+      "iron": 0
+    },
+    "Egg (whole)": {
+      "amount": 50,
+      "energy": 85,
+      "protein": 6.5,
+      "carbs": 0,
+      "fats": 6.5,
+      "fibre": 0,
+      "calcium": 24.7,
+      "iron": 0.9
+    },
+    "Egg white": {
+      "amount": 33,
+      "energy": 15,
+      "protein": 3,
+      "carbs": 0,
+      "fats": 0,
+      "fibre": 0,
+      "calcium": 1.9,
+      "iron": 0
+    },
+    "Egg yolk": {
+      "amount": 17,
+      "energy": 65,
+      "protein": 3,
+      "carbs": 0,
+      "fats": 6,
+      "fibre": 0,
+      "calcium": 19.7,
+      "iron": 0.5
+    },
+    "Chicken leg (Skinless)": {
+      "amount": 100,
+      "energy": 384,
+      "protein": 19.5,
+      "carbs": 0,
+      "fats": 12.6,
+      "fibre": 0,
+      "calcium": 20.5,
+      "iron": 1.3
+    },
+    "Chicken thigh (Skinless)": {
+      "amount": 100,
+      "energy": 200,
+      "protein": 18,
+      "carbs": 0,
+      "fats": 14.2,
+      "fibre": 0,
+      "calcium": 18.4,
+      "iron": 1.1
+    },
+    "Chicken breast (Skinless)": {
+      "amount": 100,
+      "energy": 168,
+      "protein": 22,
+      "carbs": 0,
+      "fats": 9,
+      "fibre": 0,
+      "calcium": 12.9,
+      "iron": 0.8
+    },
+    "Chicken wing (Skinless)": {
+      "amount": 100,
+      "energy": 193,
+      "protein": 17.5,
+      "carbs": 0,
+      "fats": 13.8,
+      "fibre": 0,
+      "calcium": 28.1,
+      "iron": 1.4
+    },
+    "Chicken liver": {
+      "amount": 100,
+      "energy": 124,
+      "protein": 21.5,
+      "carbs": 0,
+      "fats": 4,
+      "fibre": 0,
+      "calcium": 4.1,
+      "iron": 9.9
+    },
+    "Mutton": {
+      "amount": 100,
+      "energy": 100,
+      "protein": 18,
+      "carbs": 0,
+      "fats": 0.53,
+      "fibre": 0,
+      "calcium": 0,
+      "iron": 0
+    },
+    "Goat shoulder, meat": {
+      "amount": 100,
+      "energy": 188,
+      "protein": 20.3,
+      "carbs": 0,
+      "fats": 11.9,
+      "fibre": 0,
+      "calcium": 6.2,
+      "iron": 1.5
+    },
+    "Goat carbsp": {
+      "amount": 100,
+      "energy": 135,
+      "protein": 20.3,
+      "carbs": 0,
+      "fats": 5.9,
+      "fibre": 0,
+      "calcium": 7.4,
+      "iron": 1.9
+    },
+    "Goat leg": {
+      "amount": 100,
+      "energy": 160,
+      "protein": 22,
+      "carbs": 0,
+      "fats": 7.9,
+      "fibre": 0,
+      "calcium": 5.8,
+      "iron": 1.8
+    },
+    "Beef": {
+      "amount": 100,
+      "energy": 135,
+      "protein": 20,
+      "carbs": 0,
+      "fats": 6,
+      "fibre": 0,
+      "calcium": 0,
+      "iron": 0
+    },
+    "Hilsa": {
+      "amount": 100,
+      "energy": 259,
+      "protein": 21.8,
+      "carbs": 0,
+      "fats": 18.5,
+      "fibre": 0,
+      "calcium": 19.8,
+      "iron": 1.2
+    },
+    "Pomfret, white": {
+      "amount": 100,
+      "energy": 122,
+      "protein": 19,
+      "carbs": 0,
+      "fats": 5.1,
+      "fibre": 0,
+      "calcium": 13.6,
+      "iron": 0.3
+    },
+    "Salmon": {
+      "amount": 100,
+      "energy": 172,
+      "protein": 20.9,
+      "carbs": 0,
+      "fats": 9.8,
+      "fibre": 0,
+      "calcium": 24.3,
+      "iron": 0.98
+    },
+    "Sardine": {
+      "amount": 100,
+      "energy": 152,
+      "protein": 17.9,
+      "carbs": 0,
+      "fats": 8.9,
+      "fibre": 0,
+      "calcium": 42.6,
+      "iron": 0.8
+    },
+    "Mackerel (Bangda)": {
+      "amount": 100,
+      "energy": 101,
+      "protein": 21.5,
+      "carbs": 0,
+      "fats": 1.5,
+      "fibre": 0,
+      "calcium": 31.3,
+      "iron": 1.5
+    },
+    "Bombay duck (Bombil)": {
+      "amount": 100,
+      "energy": 69,
+      "protein": 13.5,
+      "carbs": 0,
+      "fats": 1,
+      "fibre": 0,
+      "calcium": 159,
+      "iron": 0.8
+    },
+    "Rohu": {
+      "amount": 100,
+      "energy": 102,
+      "protein": 19.7,
+      "carbs": 0,
+      "fats": 2.3,
+      "fibre": 0,
+      "calcium": 39.4,
+      "iron": 1
+    },
+    "Shell Fish": {
+      "amount": 100,
+      "energy": 100,
+      "protein": 20,
+      "carbs": 0.5,
+      "fats": 1,
+      "fibre": 0,
+      "calcium": 0,
+      "iron": 0
+    },
+    "Lobster, king size": {
+      "amount": 100,
+      "energy": 90,
+      "protein": 18.5,
+      "carbs": 0,
+      "fats": 0.7,
+      "fibre": 0,
+      "calcium": 66.4,
+      "iron": 0.4
+    },
+    "Prawns, big": {
+      "amount": 100,
+      "energy": 91,
+      "protein": 19.2,
+      "carbs": 0,
+      "fats": 0.5,
+      "fibre": 0,
+      "calcium": 48.6,
+      "iron": 0.8
+    },
+    "Prawns, small (Jawla)": {
+      "amount": 100,
+      "energy": 71,
+      "protein": 13,
+      "carbs": 0,
+      "fats": 0.7,
+      "fibre": 0,
+      "calcium": 68,
+      "iron": 0.9
+    },
+    "Tiger prawns": {
+      "amount": 100,
+      "energy": 68,
+      "protein": 14.2,
+      "carbs": 0,
+      "fats": 0.6,
+      "fibre": 0,
+      "calcium": 57.9,
+      "iron": 0.8
+    },
+    "Amaranth leaves,green": {
+      "amount": 100,
+      "energy": 30.5,
+      "protein": 3.2,
+      "carbs": 2.2,
+      "fats": 0.6,
+      "fibre": 0.1,
+      "calcium": 74.2,
+      "iron": 0.85
+    },
+    "Amaranth leaves,red": {
+      "amount": 100,
+      "energy": 33.4,
+      "protein": 4,
+      "carbs": 2.3,
+      "fats": 0.6,
+      "fibre": 4.91,
+      "calcium": 245,
+      "iron": 7.25
+    },
+    "Amaranth leaves,red and green mix": {
+      "amount": 100,
+      "energy": 31.55,
+      "protein": 3.09,
+      "carbs": 2.87,
+      "fats": 0.53,
+      "fibre": 0.36,
+      "calcium": 34,
+      "iron": 1.95
+    },
+    "Bathua leaves": {
+      "amount": 100,
+      "energy": 28,
+      "protein": 2.5,
+      "carbs": 3.8,
+      "fats": 0.4,
+      "fibre": 4.01,
+      "calcium": 211,
+      "iron": 2.66
+    },
+    "Betel leaves": {
+      "amount": 100,
+      "energy": 48,
+      "protein": 2.5,
+      "carbs": 7.3,
+      "fats": 0.7,
+      "fibre": 0.13,
+      "calcium": 4.44,
+      "iron": 0.16
+    },
+    "Cabbage,green": {
+      "amount": 100,
+      "energy": 21.5,
+      "protein": 1.3,
+      "carbs": 3.2,
+      "fats": 0.1,
+      "fibre": 0.2,
+      "calcium": 170,
+      "iron": 2.67
+    },
+    "Cabbage,violet": {
+      "amount": 100,
+      "energy": 23,
+      "protein": 1.3,
+      "carbs": 3.5,
+      "fats": 0.2,
+      "fibre": 2.21,
+      "calcium": 48,
+      "iron": 0.24
+    },
+    "Cauliflower leaves": {
+      "amount": 100,
+      "energy": 35,
+      "protein": 4,
+      "carbs": 3.4,
+      "fats": 0.4,
+      "fibre": 0.26,
+      "calcium": 16.41,
+      "iron": 0.32
+    },
+    "Collocasia leaves": {
+      "amount": 100,
+      "energy": 43,
+      "protein": 3.4,
+      "carbs": 3.6,
+      "fats": 1.3,
+      "fibre": 0.18,
+      "calcium": 50.8,
+      "iron": 0.5
+    },
+    "Drumstick leaves": {
+      "amount": 100,
+      "energy": 67,
+      "protein": 6.4,
+      "carbs": 5.6,
+      "fats": 1.6,
+      "fibre": 0.19,
+      "calcium": 71,
+      "iron": 1.09
+    },
+    "Fenugreek leaves": {
+      "amount": 100,
+      "energy": 34.4,
+      "protein": 3.6,
+      "carbs": 2.1,
+      "fats": 0.8,
+      "fibre": 0.21,
+      "calcium": 27.8,
+      "iron": 1.37
+    },
+    "Garden cress": {
+      "amount": 100,
+      "energy": 49.7,
+      "protein": 5.6,
+      "carbs": 4.4,
+      "fats": 0.8,
+      "fibre": 2.6,
+      "calcium": 217,
+      "iron": 6.19
+    },
+    "Lettuce": {
+      "amount": 100,
+      "energy": 21.7,
+      "protein": 1.5,
+      "carbs": 3,
+      "fats": 0.2,
+      "fibre": 0.24,
+      "calcium": 2.07,
+      "iron": 0.59
+    },
+    "Mustard leaves": {
+      "amount": 100,
+      "energy": 30.3,
+      "protein": 3.5,
+      "carbs": 2.4,
+      "fats": 0.5,
+      "fibre": 0.06,
+      "calcium": 23.8,
+      "iron": 0.12
+    },
+    "Parsley": {
+      "amount": 100,
+      "energy": 73,
+      "protein": 5.55,
+      "carbs": 9.4,
+      "fats": 1.14,
+      "fibre": 0.05,
+      "calcium": 48.7,
+      "iron": 2.25
+    },
+    "Pumpkin leaves,tender": {
+      "amount": 100,
+      "energy": 44.21,
+      "protein": 4.21,
+      "carbs": 4.75,
+      "fats": 0.74,
+      "fibre": 0.09,
+      "calcium": 73.6,
+      "iron": 0.39
+    },
+    "Radish leaves": {
+      "amount": 100,
+      "energy": 26,
+      "protein": 2.22,
+      "carbs": 2.77,
+      "fats": 0.51,
+      "fibre": 0.1,
+      "calcium": 53.1,
+      "iron": 0.52
+    },
+    "Spinach": {
+      "amount": 100,
+      "energy": 102,
+      "protein": 2.14,
+      "carbs": 2.05,
+      "fats": 0.64,
+      "fibre": 0.24,
+      "calcium": 6.51,
+      "iron": 0.68
+    },
+    "Tamarind leaves": {
+      "amount": 100,
+      "energy": 71.46,
+      "protein": 5.84,
+      "carbs": 10.04,
+      "fats": 0.49,
+      "fibre": 0.02,
+      "calcium": 0.96,
+      "iron": 0.7
+    },
+    "Ash gourd": {
+      "amount": 100,
+      "energy": 17.45,
+      "protein": 0.79,
+      "carbs": 2.84,
+      "fats": 0.14,
+      "fibre": 0.23,
+      "calcium": 1.46,
+      "iron": 0.2
+    },
+    "Bitter gourd": {
+      "amount": 100,
+      "energy": 20.79,
+      "protein": 1.44,
+      "carbs": 2.82,
+      "fats": 0.24,
+      "fibre": 0.16,
+      "calcium": 2.2,
+      "iron": 0.36
+    },
+    "Bottle gourd": {
+      "amount": 100,
+      "energy": 10.99,
+      "protein": 0.53,
+      "carbs": 1.68,
+      "fats": 0.13,
+      "fibre": 0.07,
+      "calcium": 2.54,
+      "iron": 0.03
+    },
+    "Brinjal all varieties": {
+      "amount": 100,
+      "energy": 25.34,
+      "protein": 1.48,
+      "carbs": 3.52,
+      "fats": 0.32,
+      "fibre": 0.49,
+      "calcium": 3.13,
+      "iron": 0.08
+    },
+    "Broad beans": {
+      "amount": 100,
+      "energy": 29.4,
+      "protein": 3.85,
+      "carbs": 2.11,
+      "fats": 0.15,
+      "fibre": 0.15,
+      "calcium": 5.06,
+      "iron": 0.2
+    },
+    "Capsicum, green": {
+      "amount": 100,
+      "energy": 16.25,
+      "protein": 1.11,
+      "carbs": 1.84,
+      "fats": 0.34,
+      "fibre": 0.22,
+      "calcium": 2.93,
+      "iron": 0.11
+    },
+    "Capsicum, red": {
+      "amount": 100,
+      "energy": 19.84,
+      "protein": 1.47,
+      "carbs": 2.14,
+      "fats": 0.47,
+      "fibre": 0.17,
+      "calcium": 1.11,
+      "iron": 0.05
+    },
+    "Capsicum, yellow": {
+      "amount": 100,
+      "energy": 18.64,
+      "protein": 1.35,
+      "carbs": 1.95,
+      "fats": 0.41,
+      "fibre": 0.13,
+      "calcium": 4.17,
+      "iron": 0.12
+    },
+    "Cauliflower": {
+      "amount": 100,
+      "energy": 22.95,
+      "protein": 2.15,
+      "carbs": 2.03,
+      "fats": 0.44,
+      "fibre": 0.27,
+      "calcium": 3.47,
+      "iron": 0.34
+    },
+    "Cluster beans": {
+      "amount": 100,
+      "energy": 40.15,
+      "protein": 3.55,
+      "carbs": 4.91,
+      "fats": 0.37,
+      "fibre": 0.54,
+      "calcium": 17.8,
+      "iron": 0.66
+    },
+    "Corn, baby": {
+      "amount": 100,
+      "energy": 73.14,
+      "protein": 2.69,
+      "carbs": 11.66,
+      "fats": 1.33,
+      "fibre": 0.5,
+      "calcium": 13.84,
+      "iron": 0.23
+    },
+    "Cucumber,green,short": {
+      "amount": 100,
+      "energy": 17.45,
+      "protein": 0.83,
+      "carbs": 2.82,
+      "fats": 0.18,
+      "fibre": 0.26,
+      "calcium": 3.46,
+      "iron": 0.12
+    },
+    "Drumstick": {
+      "amount": 100,
+      "energy": 29.4,
+      "protein": 2.62,
+      "carbs": 3.76,
+      "fats": 0.12,
+      "fibre": 0.22,
+      "calcium": 5.54,
+      "iron": 0.18
+    },
+    "Field beans, tender, broad": {
+      "amount": 100,
+      "energy": 30.83,
+      "protein": 3.06,
+      "carbs": 2.75,
+      "fats": 0.64,
+      "fibre": 5.64,
+      "calcium": 70.57,
+      "iron": 1.95
+    },
+    "French beans, country": {
+      "amount": 100,
+      "energy": 24.38,
+      "protein": 2.49,
+      "carbs": 2.68,
+      "fats": 0.26,
+      "fibre": 0.41,
+      "calcium": 10.7,
+      "iron": 0.31
+    },
+    "Ladies finger": {
+      "amount": 100,
+      "energy": 27.48,
+      "protein": 2.08,
+      "carbs": 3.62,
+      "fats": 0.22,
+      "fibre": 0.19,
+      "calcium": 6.93,
+      "iron": 0.15
+    },
+    "Mango green raw": {
+      "amount": 100,
+      "energy": 49,
+      "protein": 0.69,
+      "carbs": 10.59,
+      "fats": 0.08,
+      "fibre": 0.19,
+      "calcium": 4.93,
+      "iron": 0.08
+    },
+    "Papaya raw": {
+      "amount": 100,
+      "energy": 24,
+      "protein": 0.5,
+      "carbs": 4.4,
+      "fats": 0.23,
+      "fibre": 0.05,
+      "calcium": 1.71,
+      "iron": 0.03
+    },
+    "Peas fresh": {
+      "amount": 100,
+      "energy": 81,
+      "protein": 7.25,
+      "carbs": 11.88,
+      "fats": 0.13,
+      "fibre": 0.26,
+      "calcium": 3.62,
+      "iron": 0.15
+    },
+    "Plantain green": {
+      "amount": 100,
+      "energy": 80,
+      "protein": 1.18,
+      "carbs": 17.58,
+      "fats": 0.23,
+      "fibre": 0.27,
+      "calcium": 2.56,
+      "iron": 0.09
+    },
+    "Pumpkin green cylindrical": {
+      "amount": 100,
+      "energy": 25,
+      "protein": 0.87,
+      "carbs": 4.22,
+      "fats": 0.18,
+      "fibre": 2.53,
+      "calcium": 24.1,
+      "iron": 0.29
+    },
+    "Pumpkin orange round": {
+      "amount": 100,
+      "energy": 23,
+      "protein": 0.84,
+      "carbs": 4,
+      "fats": 0.16,
+      "fibre": 0.11,
+      "calcium": 4.3,
+      "iron": 0.11
+    },
+    "Red gram tender fresh": {
+      "amount": 100,
+      "energy": 124,
+      "protein": 8.09,
+      "carbs": 19.46,
+      "fats": 0.92,
+      "fibre": 5.9,
+      "calcium": 58.58,
+      "iron": 1.18
+    },
+    "Ridge gourd": {
+      "amount": 100,
+      "energy": 13,
+      "protein": 0.91,
+      "carbs": 1.72,
+      "fats": 0.14,
+      "fibre": 0.13,
+      "calcium": 1.38,
+      "iron": 0.05
+    },
+    "Ridge gourd smooth skin": {
+      "amount": 100,
+      "energy": 15,
+      "protein": 0.98,
+      "carbs": 2.24,
+      "fats": 0.13,
+      "fibre": 0.28,
+      "calcium": 2.15,
+      "iron": 0.18
+    },
+    "Snake gourd long pale green": {
+      "amount": 100,
+      "energy": 12,
+      "protein": 0.98,
+      "carbs": 1.27,
+      "fats": 0.25,
+      "fibre": 0.11,
+      "calcium": 4.77,
+      "iron": 0.08
+    },
+    "Tomato green": {
+      "amount": 100,
+      "energy": 21,
+      "protein": 1.12,
+      "carbs": 3.18,
+      "fats": 0.27,
+      "fibre": 0.08,
+      "calcium": 1.56,
+      "iron": 0.08
+    },
+    "Tomato ripe local": {
+      "amount": 100,
+      "energy": 19.59,
+      "protein": 0.9,
+      "carbs": 2.71,
+      "fats": 0.47,
+      "fibre": 0.04,
+      "calcium": 1.84,
+      "iron": 0.09
+    },
+    "Zucchini green": {
+      "amount": 100,
+      "energy": 20.07,
+      "protein": 1.1,
+      "carbs": 2.33,
+      "fats": 0.51,
+      "fibre": 2.3,
+      "calcium": 17.26,
+      "iron": 0.52
+    },
+    "Beetroot": {
+      "amount": 100,
+      "energy": 50,
+      "protein": 0,
+      "carbs": 10,
+      "fats": 0,
+      "fibre": 3.3,
+      "calcium": 17.8,
+      "iron": 0.76
+    },
+    "Carrot": {
+      "amount": 100,
+      "energy": 50,
+      "protein": 0,
+      "carbs": 10,
+      "fats": 0,
+      "fibre": 4.18,
+      "calcium": 35,
+      "iron": 0.6
+    },
+    "Onion": {
+      "amount": 100,
+      "energy": 50,
+      "protein": 0,
+      "carbs": 10,
+      "fats": 0,
+      "fibre": 2.45,
+      "calcium": 21,
+      "iron": 0.43
+    },
+    "Onion stalk": {
+      "amount": 100,
+      "energy": 26,
+      "protein": 2.07,
+      "carbs": 2.99,
+      "fats": 0.26,
+      "fibre": 0.1,
+      "calcium": 7.53,
+      "iron": 0.54
+    },
+    "Radish": {
+      "amount": 100,
+      "energy": 135,
+      "protein": 0.7,
+      "carbs": 6.6,
+      "fats": 0,
+      "fibre": 2.65,
+      "calcium": 30,
+      "iron": 0.36
+    },
+    "Potato": {
+      "amount": 100,
+      "energy": 100,
+      "protein": 1.5,
+      "carbs": 23,
+      "fats": 0,
+      "fibre": 1.71,
+      "calcium": 9.5,
+      "iron": 0.57
+    },
+    "Sweet potato": {
+      "amount": 85,
+      "energy": 100,
+      "protein": 1,
+      "carbs": 24,
+      "fats": 0,
+      "fibre": 3.9,
+      "calcium": 16.2,
+      "iron": 0.51
+    },
+    "Yam": {
+      "amount": 125,
+      "energy": 100,
+      "protein": 1.5,
+      "carbs": 23,
+      "fats": 0,
+      "fibre": 4.08,
+      "calcium": 16.2,
+      "iron": 0.77
+    },
+    "Apple": {
+      "amount": 100,
+      "energy": 62,
+      "protein": 0.29,
+      "carbs": 13.11,
+      "fats": 0.6,
+      "fibre": 2.59,
+      "calcium": 13.6,
+      "iron": 0.26
+    },
+    "Avocado": {
+      "amount": 100,
+      "energy": 144,
+      "protein": 2.9,
+      "carbs": 1.7,
+      "fats": 13.8,
+      "fibre": 6.6,
+      "calcium": 28.4,
+      "iron": 0.8
+    },
+    "Banana": {
+      "amount": 100,
+      "energy": 110,
+      "protein": 1.2,
+      "carbs": 24.9,
+      "fats": 0.3,
+      "fibre": 2.2,
+      "calcium": 6.7,
+      "iron": 0.4
+    },
+    "Black berry": {
+      "amount": 100,
+      "energy": 37,
+      "protein": 1.3,
+      "carbs": 6.7,
+      "fats": 0.5,
+      "fibre": 3.8,
+      "calcium": 30,
+      "iron": 4.3
+    },
+    "Cherry": {
+      "amount": 100,
+      "energy": 60,
+      "protein": 1.4,
+      "carbs": 11.8,
+      "fats": 0.4,
+      "fibre": 2.1,
+      "calcium": 23.8,
+      "iron": 0.3
+    },
+    "Custard apple": {
+      "amount": 100,
+      "energy": 99,
+      "protein": 1.6,
+      "carbs": 20.3,
+      "fats": 0.6,
+      "fibre": 5.1,
+      "calcium": 28.2,
+      "iron": 0.4
+    },
+    "Grapes black": {
+      "amount": 100,
+      "energy": 61,
+      "protein": 0.7,
+      "carbs": 13.2,
+      "fats": 0.3,
+      "fibre": 1.3,
+      "calcium": 10.5,
+      "iron": 0.2
+    },
+    "Grapes green": {
+      "amount": 100,
+      "energy": 56,
+      "protein": 0.7,
+      "carbs": 12.1,
+      "fats": 0.2,
+      "fibre": 1.2,
+      "calcium": 11.1,
+      "iron": 0.2
+    },
+    "Guava": {
+      "amount": 100,
+      "energy": 32,
+      "protein": 1.4,
+      "carbs": 5.1,
+      "fats": 0.3,
+      "fibre": 8.5,
+      "calcium": 18.5,
+      "iron": 0.3
+    },
+    "Jackfruit": {
+      "amount": 100,
+      "energy": 77,
+      "protein": 5.7,
+      "carbs": 11.8,
+      "fats": 0.4,
+      "fibre": 8.6,
+      "calcium": 37.5,
+      "iron": 0.3
+    },
+    "Jamun": {
+      "amount": 100,
+      "energy": 54,
+      "protein": 0.9,
+      "carbs": 10.6,
+      "fats": 0.6,
+      "fibre": 4.3,
+      "calcium": 23.8,
+      "iron": 0.6
+    },
+    "Mango": {
+      "amount": 100,
+      "energy": 42,
+      "protein": 0.5,
+      "carbs": 8.1,
+      "fats": 0.5,
+      "fibre": 1.8,
+      "calcium": 15.7,
+      "iron": 0.5
+    },
+    "Muskelon": {
+      "amount": 100,
+      "energy": 23,
+      "protein": 0.4,
+      "carbs": 4.2,
+      "fats": 0.3,
+      "fibre": 1.5,
+      "calcium": 9.8,
+      "iron": 0.1
+    },
+    "Orange": {
+      "amount": 100,
+      "energy": 37,
+      "protein": 0.7,
+      "carbs": 7.9,
+      "fats": 0.1,
+      "fibre": 1.2,
+      "calcium": 19.5,
+      "iron": 0.8
+    },
+    "Sweetlime": {
+      "amount": 100,
+      "energy": 27,
+      "protein": 0.7,
+      "carbs": 5.1,
+      "fats": 0.2,
+      "fibre": 2,
+      "calcium": 25.7,
+      "iron": 0.1
+    },
+    "Papaya": {
+      "amount": 100,
+      "energy": 24,
+      "protein": 0.4,
+      "carbs": 4.6,
+      "fats": 0.1,
+      "fibre": 2.8,
+      "calcium": 15,
+      "iron": 0.2
+    },
+    "Peach": {
+      "amount": 100,
+      "energy": 40,
+      "protein": 0.8,
+      "carbs": 7.8,
+      "fats": 0.3,
+      "fibre": 2.1,
+      "calcium": 6.9,
+      "iron": 0.3
+    },
+    "Pear": {
+      "amount": 100,
+      "energy": 38,
+      "protein": 0.3,
+      "carbs": 8,
+      "fats": 0.2,
+      "fibre": 4.4,
+      "calcium": 6.5,
+      "iron": 0.2
+    },
+    "Pineapple": {
+      "amount": 100,
+      "energy": 43,
+      "protein": 0.5,
+      "carbs": 9.4,
+      "fats": 0.1,
+      "fibre": 3.4,
+      "calcium": 10.8,
+      "iron": 0.2
+    },
+    "Plum": {
+      "amount": 100,
+      "energy": 57,
+      "protein": 0.6,
+      "carbs": 12.1,
+      "fats": 0.4,
+      "fibre": 2,
+      "calcium": 7.6,
+      "iron": 0.2
+    },
+    "Pomogrante": {
+      "amount": 100,
+      "energy": 55,
+      "protein": 1.3,
+      "carbs": 11.5,
+      "fats": 0.1,
+      "fibre": 2.8,
+      "calcium": 10.6,
+      "iron": 0.3
+    },
+    "Chickoo": {
+      "amount": 100,
+      "energy": 73,
+      "protein": 0.9,
+      "carbs": 13.9,
+      "fats": 1.2,
+      "fibre": 9.6,
+      "calcium": 17.8,
+      "iron": 0.4
+    },
+    "Strawberry": {
+      "amount": 100,
+      "energy": 25,
+      "protein": 0.9,
+      "carbs": 3.4,
+      "fats": 0.5,
+      "fibre": 2.5,
+      "calcium": 15.2,
+      "iron": 0.3
+    },
+    "Watermelon": {
+      "amount": 100,
+      "energy": 20,
+      "protein": 0.6,
+      "carbs": 3.8,
+      "fats": 0.1,
+      "fibre": 0.7,
+      "calcium": 5.2,
+      "iron": 0.2
+    },
+    "Raisins": {
+      "amount": 100,
+      "energy": 306,
+      "protein": 2.5,
+      "carbs": 71.2,
+      "fats": 0.3,
+      "fibre": 3.9,
+      "calcium": 73.2,
+      "iron": 6.8
+    },
+    "Fi": {
+      "amount": 100,
+      "energy": 82,
+      "protein": 2,
+      "carbs": 16.2,
+      "fats": 0.3,
+      "fibre": 4.6,
+      "calcium": 78.5,
+      "iron": 0.6
+    },
+    "Dry apricot": {
+      "amount": 100,
+      "energy": 316,
+      "protein": 3.1,
+      "carbs": 72.6,
+      "fats": 0.7,
+      "fibre": 3.3,
+      "calcium": 28.5,
+      "iron": 2.5
+    },
+    "Dates fresh": {
+      "amount": 100,
+      "energy": 286,
+      "protein": 1.1,
+      "carbs": 67.9,
+      "fats": 0.4,
+      "fibre": 6.5,
+      "calcium": 15.7,
+      "iron": 0.8
+    },
+    "Dates dry": {
+      "amount": 100,
+      "energy": 320,
+      "protein": 2.4,
+      "carbs": 74.9,
+      "fats": 0.3,
+      "fibre": 8.9,
+      "calcium": 71.2,
+      "iron": 3.2
+    },
+    "Sugar": {
+      "amount": 25,
+      "energy": 100,
+      "protein": 0,
+      "carbs": 25,
+      "fats": 0,
+      "fibre": 0,
+      "calcium": 3,
+      "iron": 0
+    },
+    "Sago": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 0,
+      "carbs": 21,
+      "fats": 0.3,
+      "fibre": 0,
+      "calcium": 3,
+      "iron": 0.3
+    },
+    "Honey": {
+      "amount": 25,
+      "energy": 80,
+      "protein": 0,
+      "carbs": 20,
+      "fats": 0,
+      "fibre": 0,
+      "calcium": 1.2,
+      "iron": 0.1
+    },
+    "Soy milk": {
+      "amount": 4,
+      "energy": 600,
+      "protein": 208,
+      "carbs": 19.2,
+      "fats": 11.2,
+      "fibre": 9.8,
+      "calcium": 0,
+      "iron": 0
+    },
+    "Soya chunks": {
+      "amount": 1,
+      "energy": 30,
+      "protein": 102,
+      "carbs": 16,
+      "fats": 10,
+      "fibre": 0,
+      "calcium": 0,
+      "iron": 0
+    },
+    "Tofu": {
+      "amount": 1,
+      "energy": 50,
+      "protein": 73,
+      "carbs": 7.3,
+      "fats": 3,
+      "fibre": 4,
+      "calcium": 0,
+      "iron": 0
+    },
+    "Sports gel": {
+      "amount": 30,
+      "energy": 100,
+      "protein": 0,
+      "carbs": 25,
+      "fats": 0,
+      "fibre": 0,
+      "calcium": 0,
+      "iron": 0
+    },
+    "Greek yogurt": {
+      "amount": 1,
+      "energy": 100,
+      "protein": 77,
+      "carbs": 8,
+      "fats": 6.2,
+      "fibre": 2.2,
+      "calcium": 0,
+      "iron": 0
+    },
+    "Lactose free milk (Amul)": {
+      "amount": 150,
+      "energy": 88.5,
+      "protein": 4.5,
+      "carbs": 6.7,
+      "fats": 4.6,
+      "fibre": 0,
+      "calcium": 0,
+      "iron": 0
+    },
+    "Unsweetend peanut butter": {
+      "amount": 15,
+      "energy": 96,
+      "protein": 5,
+      "carbs": 2,
+      "fats": 8,
+      "fibre": 0,
+      "calcium": 0,
+      "iron": 0
+    }
+  }
+}
