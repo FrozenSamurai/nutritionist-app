@@ -57,6 +57,7 @@ const SaveModal = ({
       navigate("/dashboard");
       setAllEnteredData({});
       setCurrentData({});
+      alert("Data Saved Successfully.");
     } else {
       setError(true);
     }
