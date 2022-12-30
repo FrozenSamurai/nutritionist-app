@@ -50,7 +50,10 @@ const AddFoodItem = ({ setAddFoodItem }) => {
       console.log(newItem);
       set(nutrientsRef, {
         ...newItem,
-      }).then(setAddFoodItem(false));
+      }).then(() => {
+        setAddFoodItem(false);
+        alert("Item Added Successfully");
+      });
     }
   };
 
