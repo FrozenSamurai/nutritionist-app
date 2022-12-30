@@ -51,11 +51,11 @@ const Dashboard = ({
         </div>
         <hr className="w-full border-2 bg-black border-black mt-5" />
         <div>
-          <h1 className="text-3xl font-semibold mt-10">
+          <h1 className="text-3xl font-semibold md:mt-5">
             What you wish to do today
           </h1>
         </div>
-        <div className="w-full h-96 py-5 relative flex flex-row justify-center space-x-5 px-10 items-center">
+        <div className="w-full h-3/5 py-5 relative flex flex-row justify-center space-x-5 px-10 items-center">
           <div
             className="w-1/3 shadow-lg h-full border-2 rounded-2xl cursor-pointer hover:scale-105 hover:bg-slate-100 flex flex-col justify-center items-center"
             onClick={() => {

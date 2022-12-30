@@ -228,6 +228,14 @@ const AddFoodItem = ({ setAddFoodItem }) => {
                 >
                   Save
                 </button>
+                <button
+                  className="bg-red-500 w-fit px-5 py-1 rounded-md hover:bg-red-600 font-semibold "
+                  onClick={() => {
+                    setAddFoodItem(false);
+                  }}
+                >
+                  Close
+                </button>
               </div>
             </div>
           </div>
