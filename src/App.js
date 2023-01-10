@@ -11,6 +11,7 @@ import Dashboard from "./components/Dashboard";
 import Protected from "./components/Protected";
 import History from "./components/History";
 import { BarLoader } from "react-spinners";
+import HistoryRecall from "./components/HistoryRecall";
 
 function App() {
   const db = getDatabase(app);
@@ -140,17 +141,10 @@ function App() {
         path="/history-recall"
         element={
           <Protected isSignedIn={isSignedIn}>
-            <div className="w-screen h-screen flex flex-col justify-center items-center text-4xl font-bold font-firaCode">
-              <h1 className="w-fit ">Coming Soon!!</h1>
-              <button
-                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md mt-4"
-                onClick={() => {
-                  navigate(-1);
-                }}
-              >
-                Go Black
-              </button>
-            </div>
+            <HistoryRecall
+              setCurrentData={setCurrentData}
+              currentData={currentData}
+            />
           </Protected>
         }
       />

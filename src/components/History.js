@@ -3,7 +3,7 @@ import { getDatabase, ref, onValue } from "firebase/database";
 import DataTable from "react-data-table-component";
 import { useNavigate } from "react-router-dom";
 
-const History = ({ userDetails, userCred }) => {
+const History = ({ userDetails, userCred, setCurrentData }) => {
   const navigate = useNavigate();
 
   const [historyData, setHistoryData] = useState({});
@@ -15,7 +15,7 @@ const History = ({ userDetails, userCred }) => {
       ...historyData[key],
       Uid: key,
     }));
-
+    console.log(tempRows);
     setRows(tempRows);
 
     return () => {};
@@ -66,6 +66,7 @@ const History = ({ userDetails, userCred }) => {
           className="w-fit px-3 py-1 bg-blue-500 hover:bg-blue-400 rounded-md font-bold"
           onClick={() => {
             console.log(row.Recall);
+            setCurrentData(row);
             navigate("/history-recall");
           }}
         >

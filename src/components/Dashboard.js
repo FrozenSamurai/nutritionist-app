@@ -32,8 +32,13 @@ const Dashboard = ({
       });
   };
   return (
-    <div className="w-full bg-slate-300 h-screen flex justify-center relative items-center">
-      <div className="flex w-3/4 border-white shadow-slate-900 shadow-xl bg-white rounded-3xl h-5/6 flex-col justify-start items-center px-10">
+    <div
+      className="w-full bg-slate-300 h-screen flex justify-center relative items-center bg-no-repeat bg-cover"
+      style={{
+        backgroundImage: "url(assets/background.jpg)",
+      }}
+    >
+      <div className="flex w-3/4 border-white shadow-slate-900 shadow-xl bg-opacity-95 bg-white rounded-3xl h-5/6 flex-col justify-start items-center px-10">
         <div className=" w-full h-fit flex flex-col justify-center items-center relative">
           <h1 className="text-center mt-10 text-3xl text-blue-500 ">
             Welcome Back, {userDetails.name}
