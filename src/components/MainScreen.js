@@ -6,6 +6,7 @@ import { TfiSave } from "react-icons/tfi";
 import SaveModal from "./SaveModal";
 import { getDatabase, ref, onValue } from "firebase/database";
 import AddFoodItem from "./AddFoodItem";
+import SaveModal2 from "./SaveModal2";
 
 const MainScreen = ({
   setNutrients,
@@ -343,17 +344,33 @@ const MainScreen = ({
         </div>
       ) : null}
       {showModal ? (
-        <SaveModal
-          setShowModal={setShowModal}
-          setCurrentData={setCurrentData}
-          setAllEnteredData={setAllEnteredData}
-          currentData={currentData}
-          uid={uid}
-          height={height}
-          weight={weight}
-          age={age}
-          gender={gender}
-        />
+        userDetails.role === "friend" ? (
+          <SaveModal
+            setShowModal={setShowModal}
+            setCurrentData={setCurrentData}
+            setAllEnteredData={setAllEnteredData}
+            currentData={currentData}
+            uid={uid}
+            height={height}
+            weight={weight}
+            age={age}
+            gender={gender}
+          />
+        ) : (
+          <SaveModal2
+            setShowModal={setShowModal}
+            setCurrentData={setCurrentData}
+            setAllEnteredData={setAllEnteredData}
+            currentData={currentData}
+            uid={uid}
+            height={height}
+            weight={weight}
+            age={age}
+            gender={gender}
+            userCred={userCred}
+            userDetails={userDetails}
+          />
+        )
       ) : null}
       <button
         className="px-2 py-1 absolute bg-blue-400 hover:bg-blue-300 top-0 left-20 rounded-md hover:scale-105"
