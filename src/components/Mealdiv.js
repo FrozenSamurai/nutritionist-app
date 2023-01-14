@@ -33,6 +33,7 @@ const Mealdiv = ({
         [mealName]: rownum,
       },
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rownum, setRownum]);
 
   const handleCheck = (meal) => {

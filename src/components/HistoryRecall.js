@@ -1,9 +1,8 @@
+/* eslint-disable array-callback-return */
 import React, { useEffect, useState } from "react";
-import DataTable from "react-data-table-component";
 import Table from "./Table";
 
 const HistoryRecall = ({ setCurrentData, currentData }) => {
-  const [recall, setRecall] = useState([]);
   let [totalProtine, setTotalProtine] = useState(0);
   let [totalCarbs, setTotalCarbs] = useState(0);
   let [totalFats, setTotalFats] = useState(0);
@@ -37,6 +36,7 @@ const HistoryRecall = ({ setCurrentData, currentData }) => {
     setTotalFibre(fib);
     setTotalIron(iro);
     setTotalProtine(pro);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
