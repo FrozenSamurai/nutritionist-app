@@ -51,7 +51,7 @@ const SignIn = ({ setUserDetails, setUserCred, setIsSignedIn }) => {
             placeholder="Email"
             className="w-full border-2 rounded-lg py-2 px-2 my-2"
             onChange={(e) => {
-              setEmail(e.target.value);
+              setEmail(e.target.value.trim());
             }}
           />
           <input

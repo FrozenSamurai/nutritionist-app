@@ -37,6 +37,11 @@
   }
 }
 
+@page {
+  size: landscape;
+  /* margin: 5px; */
+}
+
 /* table CSS */
 .tg {
   border-collapse: separate;

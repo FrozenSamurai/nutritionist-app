@@ -41,7 +41,7 @@ const Dashboard = ({
       <div className="flex w-3/4 border-white shadow-slate-900 shadow-xl bg-opacity-95 bg-white rounded-3xl h-5/6 flex-col justify-start items-center px-10">
         <div className=" w-full h-fit flex flex-col justify-center items-center relative">
           <h1 className="text-center mt-10 text-3xl text-blue-500 ">
-            Welcome Back, {userDetails.name}
+            Welcome Back, <strong>{userDetails.name}</strong>
           </h1>
           <div className="absolute top-12 right-5">
             <button

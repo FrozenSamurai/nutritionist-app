@@ -1,6 +1,7 @@
 /* eslint-disable array-callback-return */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Table from "./Table";
+import { useReactToPrint } from "react-to-print";
 
 const HistoryRecall = ({ setCurrentData, currentData }) => {
   let [totalProtine, setTotalProtine] = useState(0);
@@ -10,6 +11,10 @@ const HistoryRecall = ({ setCurrentData, currentData }) => {
   let [totalCalcium, setTotalCalcium] = useState(0);
   let [totalIron, setTotalIron] = useState(0);
   let [totalFibre, setTotalFibre] = useState(0);
+  let [print, setPrint] = useState(false);
+
+  const printref = useRef();
+
   useEffect(() => {
     let cal = 0,
       pro = 0,
@@ -39,34 +44,58 @@ const HistoryRecall = ({ setCurrentData, currentData }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const handlePrint = useReactToPrint({
+    content: () => printref.current,
+  });
+  useEffect(() => {
+    if (print) handlePrint();
+  }, [print, handlePrint]);
+
   return (
-    <div className="w-full h-full overflow-x-hidden flex flex-col space-y-5 py-4 justify-center items-center">
-      <div className="w-fit flex  mt-10 flex-row space-x-10">
-        <h1 className="text-3xl font-semibold">
+    <div
+      className="w-full h-full  overflow-x-hidden relative flex flex-col space-y-5 py-4 justify-center items-center"
+      ref={printref}
+    >
+      {!print && (
+        <button
+          className="absolute top-10 right-10 bg-red-500 rounded-md p-2 px-5 text-white font-bold hover:bg-red-400 hover:text-black"
+          onClick={() => {
+            setPrint(true);
+            setTimeout(() => {
+              setPrint(false);
+            }, 2000);
+            // handlePrint();
+          }}
+        >
+          Save
+        </button>
+      )}
+      <div className="w-full flex justify-center items-center mt-5 flex-row space-x-10">
+        <h1 className="text-3xl text-center font-semibold ">
           Unique Id:{" "}
           <span className="border-2 border-black px-5 rounded-md">
             {currentData.Uid}
           </span>
         </h1>
-        <h1 className="text-3xl font-semibold">
+        <h1 className="text-3xl text-center font-semibold ">
           Age:{" "}
           <span className="border-2 border-black px-5 rounded-md">
             {currentData.Age}
           </span>
         </h1>
-        <h1 className="text-3xl font-semibold">
+        <h1 className="text-3xl text-center font-semibold ">
           Height:{" "}
           <span className="border-2 border-black px-5 rounded-md">
             {currentData.Height}
           </span>
         </h1>
-        <h1 className="text-3xl font-semibold">
+        <h1 className="text-3xl text-center font-semibold ">
           Weight:{" "}
           <span className="border-2 border-black px-5 rounded-md">
             {currentData.Weight}
           </span>
         </h1>
-        <h1 className="text-3xl font-semibold">
+        <h1 className="text-3xl text-center font-semibold ">
           Gender:{" "}
           <span className="border-2 border-black px-5 rounded-md">
             {currentData.Gender}
