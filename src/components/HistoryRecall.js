@@ -51,11 +51,11 @@ const HistoryRecall = ({ setCurrentData, currentData }) => {
   useEffect(() => {
     if (print) handlePrint();
   }, [print, handlePrint]);
-  const options = {
-    orientation: "landscape",
-    // unit: "in",
-    // format: [4, 2],
-  };
+  // const options = {
+  //   orientation: "landscape",
+  //   // unit: "in",
+  //   // format: [4, 2],
+  // };
   return (
     <>
       {/* <Pdf
