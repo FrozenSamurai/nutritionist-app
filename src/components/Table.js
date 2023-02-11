@@ -193,7 +193,7 @@ const Table = ({ recall }) => {
         </div>
         <div className="w-full">
           <p className="text-center font-semibold">Iron</p>{" "}
-          <h1 className="text-center">{iron}</h1>
+          <h1 className="text-center">{iron.toFixed(3)}</h1>
         </div>
       </div>
     </>
