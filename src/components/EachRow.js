@@ -80,19 +80,21 @@ const EachRow = ({
       return;
     } else {
       const vals = nutrients[select];
-      let pro = ((vals["protein"] ?? 0 * vol) / vals["amount"]).toFixed(2);
+      let pro = (((vals["protein"] ?? 0) * vol) / vals["amount"]).toFixed(2);
       setProteinval(pro);
-      let carb = ((vals["carbs"] ?? 0 * vol) / vals["amount"]).toFixed(2);
+      let carb = (((vals["carbs"] ?? 0) * vol) / vals["amount"]).toFixed(2);
       setCarbval(carb);
-      let fats = ((vals["fats"] ?? 0 * vol) / vals["amount"]).toFixed(2);
+      let fats = (((vals["fats"] ?? 0) * vol) / vals["amount"]).toFixed(2);
       setFatsval(fats);
-      let energy = ((vals["energy"] ?? 0 * vol) / vals["amount"]).toFixed(2);
+      let energy = (((vals["energy"] ?? 0) * vol) / vals["amount"]).toFixed(2);
       setCalval(energy);
-      let calcium = ((vals["calcium"] ?? 0 * vol) / vals["amount"]).toFixed(2);
+      let calcium = (((vals["calcium"] ?? 0) * vol) / vals["amount"]).toFixed(
+        2
+      );
       setCalcival(calcium);
-      let fibre = ((vals["fibre"] ?? 0 * vol) / vals["amount"]).toFixed(2);
+      let fibre = (((vals["fibre"] ?? 0) * vol) / vals["amount"]).toFixed(2);
       setFibval(fibre);
-      let iron = ((vals["iron"] ?? 0 * vol) / vals["amount"]).toFixed(2);
+      let iron = (((vals["iron"] ?? 0) * vol) / vals["amount"]).toFixed(2);
       setIronVal(iron);
       let alldata = {
         ...allEnteredData,
