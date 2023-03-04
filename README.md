@@ -1,6 +1,6 @@
 # NutriRecall
 
-### NutriRecall is a web application for Nutritionists to collect 24 hours Diet recall and calculate the total nutrients in each meal and for entire day.
+### [NutriRecall](https://nutrirecall.vercel.app) is a web application for Nutritionists to collect 24 hours Diet recall and calculate the total nutrients in each meal and for entire day.
 
 ## Features
 
