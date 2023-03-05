@@ -2,13 +2,15 @@ import React, { useEffect, useState } from "react";
 import { getDatabase, ref, onValue } from "firebase/database";
 import DataTable from "react-data-table-component";
 import { useNavigate } from "react-router-dom";
+import DeleteModal from "./DeleteModal";
 
-const History = ({ userDetails, userCred, setCurrentData }) => {
+const History = ({ userDetails, userCred, setCurrentData, currentData }) => {
   const navigate = useNavigate();
 
   const [historyData, setHistoryData] = useState({});
   const [rows, setRows] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const tempRows = Object.keys(historyData).map((key, ind) => ({
@@ -75,22 +77,32 @@ const History = ({ userDetails, userCred, setCurrentData }) => {
       ),
       wrap: true,
     },
+    {
+      name: "Delete",
+      selector: (row) => (
+        <button
+          className="w-fit px-3 py-1 bg-red-400 hover:bg-red-500 rounded-md font-bold"
+          onClick={() => {
+            console.log(row.Uid);
+            setShowModal(!showModal);
+            setCurrentData(row);
+          }}
+        >
+          Delete
+        </button>
+      ),
+      wrap: true,
+    },
   ];
 
   useEffect(() => {
     const db = getDatabase();
-    onValue(
-      ref(db, `/${userDetails.name}`),
-      (snapshot) => {
-        const data2 = snapshot.val();
-        console.log(data2);
-        setHistoryData(data2);
-        setLoading(false);
-      },
-      {
-        onlyOnce: true,
-      }
-    );
+    onValue(ref(db, `/${userDetails.name}`), (snapshot) => {
+      const data2 = snapshot.val();
+      console.log(data2);
+      setHistoryData(data2);
+      setLoading(false);
+    });
   }, []);
   return (
     <div className="w-full flex flex-col items-center mt-10">
@@ -101,6 +113,9 @@ const History = ({ userDetails, userCred, setCurrentData }) => {
         </div>
       ) : (
         <h1 className="text-2xl text-center w-full">No Data</h1>
+      )}
+      {showModal && (
+        <DeleteModal setShowModal={setShowModal} currentData={currentData} />
       )}
     </div>
   );
