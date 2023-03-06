@@ -34,14 +34,14 @@ const EditFoodItemModal = ({ setShowModal, itemData }) => {
   const SaveNewItem = () => {
     const nutrientsRef = ref(db, `nutrients/${name}`);
     const newItem = {
-      amount: amount,
-      energy: energy,
-      protein: protein,
-      carbs: carbs,
-      fats: fats,
-      calcium: calcium,
-      fibre: fibre,
-      iron: iron,
+      amount: amount ?? 0,
+      energy: energy ?? 0,
+      protein: protein ?? 0,
+      carbs: carbs ?? 0,
+      fats: fats ?? 0,
+      calcium: calcium ?? 0,
+      fibre: fibre ?? 0,
+      iron: iron ?? 0,
     };
     console.log(newItem);
     set(nutrientsRef, {
