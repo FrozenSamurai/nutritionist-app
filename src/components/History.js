@@ -3,6 +3,7 @@ import { getDatabase, ref, onValue } from "firebase/database";
 import DataTable from "react-data-table-component";
 import { useNavigate } from "react-router-dom";
 import DeleteModal from "./DeleteModal";
+import { ClockLoader } from "react-spinners";
 
 const History = ({ userDetails, userCred, setCurrentData, currentData }) => {
   const navigate = useNavigate();
@@ -11,6 +12,7 @@ const History = ({ userDetails, userCred, setCurrentData, currentData }) => {
   const [rows, setRows] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
+  const [noData, setNoData] = useState(false);
 
   useEffect(() => {
     const tempRows = Object.keys(historyData).map((key, ind) => ({
@@ -103,19 +105,38 @@ const History = ({ userDetails, userCred, setCurrentData, currentData }) => {
       setHistoryData(data2);
       setLoading(false);
     });
+
+    setTimeout(() => {
+      setNoData(true);
+    }, 10000);
   }, []);
   return (
-    <div className="w-full flex flex-col items-center mt-10">
-      <h1 className="text-3xl font-semibold">History</h1>
+    <div className="w-full min-h-screen flex flex-col items-center justify-center mt-10">
       {rows.length > 0 ? (
-        <div className="w-5/6">
-          <DataTable columns={columns} data={rows} progressPending={loading} />
-        </div>
+        <>
+          <h1 className="text-3xl font-semibold">History</h1>
+          <div className="w-5/6">
+            <DataTable
+              columns={columns}
+              data={rows}
+              progressPending={loading}
+            />
+          </div>
+        </>
+      ) : noData ? (
+        <>
+          <h1 className="text-3xl font-semibold">History</h1>
+          <h1 className="text-3xl font-semibold">No Data Found</h1>
+        </>
       ) : (
-        <h1 className="text-2xl text-center w-full">No Data</h1>
+        <ClockLoader color="#000" />
       )}
       {showModal && (
-        <DeleteModal setShowModal={setShowModal} currentData={currentData} />
+        <DeleteModal
+          setShowModal={setShowModal}
+          currentData={currentData}
+          userDetails={userDetails}
+        />
       )}
     </div>
   );

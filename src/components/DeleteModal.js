@@ -1,34 +1,45 @@
 import React, { useState } from "react";
 import { getDatabase, ref, set, onValue } from "firebase/database";
 
-const DeleteModal = ({ setShowModal, currentData }) => {
+const DeleteModal = ({ setShowModal, currentData, userDetails }) => {
   const db = getDatabase();
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [delbutton, setDelbutton] = useState(false);
+  const [selfish, setSelfish] = useState(false);
+  console.log(userDetails);
 
   const HandleDelete = () => {
     setError(false);
     setLoading(true);
     //delete from database
-    set(ref(db, `Shweta/${currentData.Uid}`), null);
-    set(ref(db, `Niyati/${currentData.Uid}`), null);
-    set(ref(db, `Sakshi/${currentData.Uid}`), null);
-    //delete from UIDs
-    let allUIDs = {};
-    onValue(ref(db, `/UIDs`), (snapshot) => {
-      const data = snapshot.val();
-      allUIDs = { ...data };
-    });
-    const uidKey = Object.keys(allUIDs).find(
-      (key) => allUIDs[key] === currentData.Uid
-    );
-    set(ref(db, `UIDs/${uidKey}`), null);
-    //once everything is completed navigate
-    setLoading(false);
-    setShowModal(false);
-    alert("Data Deleted Successfully.");
+    if (delbutton && !selfish) {
+      set(ref(db, `Shweta/${currentData.Uid}`), null);
+      set(ref(db, `Niyati/${currentData.Uid}`), null);
+      set(ref(db, `Sakshi/${currentData.Uid}`), null);
+      //delete from UIDs
+      let allUIDs = {};
+      onValue(ref(db, `/UIDs`), (snapshot) => {
+        const data = snapshot.val();
+        allUIDs = { ...data };
+      });
+      const uidKey = Object.keys(allUIDs).find(
+        (key) => allUIDs[key] === currentData.Uid
+      );
+      set(ref(db, `UIDs/${uidKey}`), null);
+      //once everything is completed navigate
+      setLoading(false);
+      setShowModal(false);
+      alert("Data Deleted Successfully.");
+    } else if (delbutton && selfish) {
+      set(ref(db, `${userDetails.name}/${currentData.Uid}`), null);
+      setLoading(false);
+      setShowModal(false);
+      alert("Data Deleted Successfully.");
+    } else {
+      alert("Unexpected Error occured");
+    }
   };
 
   return (
@@ -57,15 +68,16 @@ const DeleteModal = ({ setShowModal, currentData }) => {
                 <h1 className="mb-5 text-xl text-center">
                   Are you sure you want to delete Recall
                 </h1>
-                <div className="flex flex-row w-full items-center justify-center ">
+                <div className="flex flex-row w-full items-center justify-start ">
                   <input
                     id="delete"
-                    type="checkbox"
+                    type="radio"
                     name="delete"
-                    value={delbutton}
+                    value={delbutton && !selfish}
                     className="w-5 h-5 cursor-pointer"
                     onChange={(e) => {
                       setDelbutton(e.target.checked);
+                      e.target.checked && setSelfish(false);
                     }}
                   />
                   <label
@@ -73,13 +85,42 @@ const DeleteModal = ({ setShowModal, currentData }) => {
                     className="px-2 text-xl font-semibold cursor-pointer"
                   >
                     Delete recall for Id:{" "}
-                    <span className="text-red-700">{currentData.Uid}</span>
+                    <span className="text-red-700">{currentData.Uid}</span> for
+                    everyone
+                  </label>
+                </div>
+                <div className="flex flex-row w-full items-center justify-start ">
+                  <input
+                    id="selfish-delete"
+                    type="radio"
+                    name="delete"
+                    value={delbutton && selfish}
+                    className="w-5 h-5 cursor-pointer"
+                    onChange={(e) => {
+                      setDelbutton(e.target.checked);
+                      setSelfish(e.target.checked);
+                    }}
+                  />
+                  <label
+                    htmlFor="selfish-delete"
+                    className="px-2 text-xl font-semibold cursor-pointer"
+                  >
+                    Delete recall for Id:{" "}
+                    <span className="text-red-700">{currentData.Uid}</span> for
+                    only me
                   </label>
                 </div>
 
-                {delbutton && (
+                {delbutton && !selfish && (
                   <h1 className="text-sm text-red-500 mt-2">
-                    *Data of this Id will be deleted from everyone's record.
+                    *Data of this Id will be deleted{" "}
+                    <span className="font-bold">from everyone's record</span>.
+                  </h1>
+                )}
+                {delbutton && selfish && (
+                  <h1 className="text-sm text-red-500 mt-2">
+                    *Data of this Id will be deleted{" "}
+                    <span className="font-bold">from only your record</span>.
                   </h1>
                 )}
               </div>
