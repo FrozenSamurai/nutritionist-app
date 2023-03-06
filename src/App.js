@@ -12,6 +12,7 @@ import Protected from "./components/Protected";
 import History from "./components/History";
 import { BarLoader } from "react-spinners";
 import HistoryRecall from "./components/HistoryRecall";
+import EditFoodItems from "./components/EditFoodItems";
 
 function App() {
   const db = getDatabase(app);
@@ -145,6 +146,14 @@ function App() {
               setCurrentData={setCurrentData}
               currentData={currentData}
             />
+          </Protected>
+        }
+      />
+      <Route
+        path="/edit-fooditems"
+        element={
+          <Protected isSignedIn={isSignedIn}>
+            <EditFoodItems />
           </Protected>
         }
       />

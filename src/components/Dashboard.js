@@ -53,6 +53,16 @@ const Dashboard = ({
               LOGOUT
             </button>
           </div>
+          <div className="absolute top-12 left-5">
+            <button
+              className="px-3 py-1 bg-orange-300 hover:bg-orange-400 rounded-md hover:scale-110 font-semibold"
+              onClick={() => {
+                navigate("/edit-fooditems");
+              }}
+            >
+              Edit Food Items
+            </button>
+          </div>
         </div>
         <hr className="w-full border-2 bg-black border-black mt-5" />
         <div>
