@@ -25,7 +25,7 @@
 
 ## License
 
-[MIT](./LISCENSE)
+[GPL V2](./LICENSE)
 
 ## Author
 
