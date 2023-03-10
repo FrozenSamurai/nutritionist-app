@@ -13,6 +13,7 @@ import History from "./components/History";
 import { BarLoader } from "react-spinners";
 import HistoryRecall from "./components/HistoryRecall";
 import EditFoodItems from "./components/EditFoodItems";
+import EditMain from "./components/editOption/EditMain";
 
 function App() {
   const db = getDatabase(app);
@@ -154,6 +155,23 @@ function App() {
         element={
           <Protected isSignedIn={isSignedIn}>
             <EditFoodItems />
+          </Protected>
+        }
+      />
+      <Route
+        path="/edit-recall"
+        element={
+          <Protected isSignedIn={isSignedIn}>
+            <EditMain
+              nutrients={nutrients}
+              setNutrients={setNutrients}
+              userDetails={userDetails}
+              userCred={userCred}
+              setCurrentData={setCurrentData}
+              currentData={currentData}
+              allEnteredData={allEnteredData}
+              setAllEnteredData={setAllEnteredData}
+            />
           </Protected>
         }
       />

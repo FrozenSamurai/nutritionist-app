@@ -73,7 +73,7 @@ const HistoryRecall = ({ setCurrentData, currentData }) => {
         )}
       </Pdf> */}
       <div
-        className="w-full h-full  overflow-x-hidden relative flex flex-col space-y-5 py-4 justify-center items-center"
+        className="w-full h-full  overflow-x-hidden relative flex flex-col space-y-5  justify-center items-center"
         ref={printref}
       >
         {!print && (
@@ -90,37 +90,37 @@ const HistoryRecall = ({ setCurrentData, currentData }) => {
             Save
           </button>
         )}
-        <div className="w-full flex justify-center items-center mt-5 flex-row space-x-10">
-          <h1 className="text-3xl text-center font-semibold ">
-            Unique Id:{" "}
+        <div className="w-full flex justify-center items-center  flex-row space-x-16">
+          <div className="flex flex-col justify-center items-center space-y-1 text-xl">
+            <h1 className="text-3xl text-center font-semibold ">Unique Id: </h1>
             <span className="border-2 border-black px-5 rounded-md">
               {currentData.Uid}
             </span>
-          </h1>
-          <h1 className="text-3xl text-center font-semibold ">
-            Age:{" "}
+          </div>
+          <div className="flex flex-col justify-center items-center space-y-1 text-xl">
+            <h1 className="text-3xl text-center font-semibold ">Age: </h1>
             <span className="border-2 border-black px-5 rounded-md">
               {currentData.Age}
             </span>
-          </h1>
-          <h1 className="text-3xl text-center font-semibold ">
-            Height:{" "}
+          </div>
+          <div className="flex flex-col justify-center items-center space-y-1 text-xl">
+            <h1 className="text-3xl text-center font-semibold ">Height: </h1>
             <span className="border-2 border-black px-5 rounded-md">
               {currentData.Height}
             </span>
-          </h1>
-          <h1 className="text-3xl text-center font-semibold ">
-            Weight:{" "}
+          </div>
+          <div className="flex flex-col justify-center items-center space-y-1 text-xl">
+            <h1 className="text-3xl text-center font-semibold ">Weight: </h1>
             <span className="border-2 border-black px-5 rounded-md">
               {currentData.Weight}
             </span>
-          </h1>
-          <h1 className="text-3xl text-center font-semibold ">
-            Gender:{" "}
+          </div>
+          <div className="flex flex-col justify-center items-center space-y-1 text-xl">
+            <h1 className="text-3xl text-center font-semibold ">Gender: </h1>
             <span className="border-2 border-black px-5 rounded-md">
               {currentData.Gender}
             </span>
-          </h1>
+          </div>
         </div>
         <hr className="border-slate-200 border-2 bg-slate-200  w-full  px-10" />
         <div className="w-4/5 flex flex-col space-y-5 ">

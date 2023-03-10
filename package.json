@@ -9,6 +9,7 @@
     "firebase": "^9.15.0",
     "react": "^18.2.0",
     "react-data-table-component": "^7.5.3",
+    "react-data-table-component-extensions": "^1.6.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.6.1",
@@ -16,7 +17,7 @@
     "react-select": "^5.7.0",
     "react-spinners": "^0.13.7",
     "react-to-print": "^2.14.11",
-    "styled-components": "^5.3.6",
+    "styled-components": "^5.3.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

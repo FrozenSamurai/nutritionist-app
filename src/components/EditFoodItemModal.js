@@ -16,20 +16,6 @@ const EditFoodItemModal = ({ setShowModal, itemData }) => {
   const [loading, setLoading] = useState(false);
 
   const db = getDatabase();
-  // useEffect(() => {
-  //   const db = getDatabase();
-  //   const nutrientsRef = ref(db, "nutrients");
-  //   onValue(nutrientsRef, (snapshot) => {
-  //     const data = snapshot.val();
-  //     // console.log(data);
-  //     setNutrients(data);
-  //     //   const array = [];
-  //     //   Object.keys(data).map((key) => {
-  //     //     array.push({ value: key, label: key });
-  //     //   });
-  //     // console.log(array);
-  //   });
-  // }, []);
 
   const SaveNewItem = () => {
     const nutrientsRef = ref(db, `nutrients/${name}`);

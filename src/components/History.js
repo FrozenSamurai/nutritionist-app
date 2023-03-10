@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getDatabase, ref, onValue } from "firebase/database";
 import DataTable from "react-data-table-component";
+import DataTableExtensions from "react-data-table-component-extensions";
+import "react-data-table-component-extensions/dist/index.css";
 import { useNavigate } from "react-router-dom";
 import DeleteModal from "./DeleteModal";
 import { ClockLoader } from "react-spinners";
@@ -30,6 +32,7 @@ const History = ({ userDetails, userCred, setCurrentData, currentData }) => {
       name: "UID",
       selector: (row) => row.Uid,
       sortable: true,
+      width: "100px",
       wrap: true,
     },
     {
@@ -93,8 +96,25 @@ const History = ({ userDetails, userCred, setCurrentData, currentData }) => {
           Delete
         </button>
       ),
+      center: true,
       wrap: true,
     },
+    // {
+    //   name: "Edit",
+    //   selector: (row) => (
+    //     <button
+    //       className="w-fit px-3 py-1 bg-green-400 hover:bg-green-500 rounded-md font-bold"
+    //       onClick={() => {
+    //         navigate("/edit-recall");
+    //         setCurrentData(row);
+    //       }}
+    //     >
+    //       Edit Data
+    //     </button>
+    //   ),
+    //   center: true,
+    //   wrap: true,
+    // },
   ];
 
   useEffect(() => {
@@ -115,12 +135,22 @@ const History = ({ userDetails, userCred, setCurrentData, currentData }) => {
       {rows.length > 0 ? (
         <>
           <h1 className="text-3xl font-semibold">History</h1>
-          <div className="w-5/6">
-            <DataTable
+          <div className="">
+            <DataTableExtensions
               columns={columns}
               data={rows}
-              progressPending={loading}
-            />
+              exportHeaders={false}
+              export={false}
+              print={false}
+              filterPlaceholder="Search"
+            >
+              <DataTable
+                columns={columns}
+                data={rows}
+                progressPending={loading}
+                highlightOnHover
+              />
+            </DataTableExtensions>
           </div>
         </>
       ) : noData ? (

@@ -2,6 +2,8 @@ import { onValue } from "firebase/database";
 import React, { useEffect, useState } from "react";
 import { getDatabase, ref } from "firebase/database";
 import DataTable from "react-data-table-component";
+import DataTableExtensions from "react-data-table-component-extensions";
+import "react-data-table-component-extensions/dist/index.css";
 import EditFoodItemModal from "./EditFoodItemModal";
 import { ClockLoader } from "react-spinners";
 import AddFoodItem from "./AddFoodItem";
@@ -19,6 +21,7 @@ const EditFoodItems = () => {
       const data = snapshot.val();
       nutrients = { ...data };
       const arr = Object.keys(nutrients).map((key, ind) => ({
+        id: ind + 1,
         ...nutrients[key],
         name: key,
       }));
@@ -101,6 +104,7 @@ const EditFoodItems = () => {
       selector: (row) => row.fats,
       width: "80px",
       right: true,
+      sortable: true,
       compact: true,
       style: {
         fontSize: 18,
@@ -152,6 +156,7 @@ const EditFoodItems = () => {
           Edit
         </button>
       ),
+      // sortable: true,
       width: "120px",
       center: true,
       wrap: true,
@@ -173,7 +178,26 @@ const EditFoodItems = () => {
                 Edit Food Items
               </span>
             </div>
-            <DataTable columns={columns} data={rows} />
+            <div>
+              <DataTableExtensions
+                columns={columns}
+                data={rows}
+                export={false}
+                print={false}
+                // filterDigit={1}
+                // exportToXlsx={false}
+              >
+                <DataTable
+                  columns={columns}
+                  data={rows}
+                  // noHeader
+                  defaultSortField="id"
+                  // defaultSortAsc={false}
+                  // pagination
+                  highlightOnHover
+                />
+              </DataTableExtensions>
+            </div>
           </>
         )}
       </div>
