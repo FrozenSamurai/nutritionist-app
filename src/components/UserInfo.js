@@ -1,0 +1,68 @@
+import React, { useState } from "react";
+import UpdatePasswordModal from "./UpdatePasswordModal";
+
+const UserInfo = ({
+  userDetails,
+  setIsSignedIn,
+  setCurrentData,
+  setAllEnteredData,
+  userCred,
+}) => {
+  const [showModal, setShowModal] = useState(false);
+
+  var t = new Date(Number(userCred.reloadUserInfo.lastLoginAt));
+
+  let date = new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  }).format(t);
+  console.log(t);
+  return (
+    <div
+      className="w-full bg-slate-300 h-screen flex justify-center relative items-center bg-no-repeat bg-cover shadow- drop-shadow-2xl"
+      style={{
+        backgroundImage: "url(assets/background.jpg)",
+      }}
+    >
+      <div className="w-fit px-10 bg-white rounded-2xl h-2/4 flex justify-start items-center flex-col py-5">
+        <img
+          src="/assets/profile.png"
+          alt="Profile Pic"
+          className="w-40 h-40 rounded-full object-contain border-2 border-black"
+        />
+        <h1 className="text-2xl" title="Username">
+          {userDetails.name}
+        </h1>
+        <h1>Nutritionist</h1>
+        {/* <hr className="w-full border-2 bg-black border-black mt-5" /> */}
+        <h1 className="text-xs text-gray-500">
+          Last Login:
+          {" " + date}
+        </h1>
+        <h1 className="text-2xl mt-2" title="Email">
+          {userDetails.email}
+        </h1>
+        <button
+          className="mt-5 border-black border-2 px-3 py-1 rounded-lg hover:bg-slate-100"
+          onClick={() => {
+            setShowModal(true);
+          }}
+        >
+          Change Password
+        </button>
+      </div>
+      {showModal && (
+        <UpdatePasswordModal
+          setShowModal={setShowModal}
+          userDetails={userDetails}
+        />
+      )}
+    </div>
+  );
+};
+
+export default UserInfo;

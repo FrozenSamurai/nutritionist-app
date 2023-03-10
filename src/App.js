@@ -14,6 +14,7 @@ import { BarLoader } from "react-spinners";
 import HistoryRecall from "./components/HistoryRecall";
 import EditFoodItems from "./components/EditFoodItems";
 import EditMain from "./components/editOption/EditMain";
+import UserInfo from "./components/UserInfo";
 
 function App() {
   const db = getDatabase(app);
@@ -89,7 +90,22 @@ function App() {
           />
         }
       /> */}
-
+      <Route
+        path="/info"
+        element={
+          <Protected isSignedIn={isSignedIn}>
+            <UserInfo
+              userDetails={userDetails}
+              setIsSignedIn={setIsSignedIn}
+              setCurrentData={setCurrentData}
+              currentData={currentData}
+              allEnteredData={allEnteredData}
+              setAllEnteredData={setAllEnteredData}
+              userCred={userCred}
+            />
+          </Protected>
+        }
+      />
       <Route
         path="/main"
         element={

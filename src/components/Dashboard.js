@@ -40,9 +40,20 @@ const Dashboard = ({
     >
       <div className="flex w-3/4 border-white shadow-slate-900 shadow-xl bg-opacity-95 bg-white rounded-3xl h-5/6 flex-col justify-start items-center px-10">
         <div className=" w-full h-fit flex flex-col justify-center items-center relative">
-          <h1 className="text-center mt-10 text-3xl text-blue-500 ">
-            Welcome Back, <strong>{userDetails.name}</strong>
-          </h1>
+          <div className="w-fit flex flex-row h-fit mt-10">
+            <h1 className="text-center text-3xl text-blue-500 ">
+              Welcome Back, <strong>{userDetails.name}</strong>{" "}
+            </h1>
+            <img
+              className="cursor-pointer w-10 h-10 animate-spin-slow hover:animate-none "
+              onClick={() => {
+                navigate("/info");
+              }}
+              src="/assets/gear.png"
+              alt="settings"
+              title="settings"
+            />
+          </div>
           <div className="absolute top-12 right-5">
             <button
               className="px-3 py-1 bg-red-300 hover:bg-red-400 rounded-md hover:scale-110 font-semibold"

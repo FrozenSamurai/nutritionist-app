@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         firaCode: ["FiraCode", "monospace"],
       },
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+      },
     },
   },
   plugins: [],
