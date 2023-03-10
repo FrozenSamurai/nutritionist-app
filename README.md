@@ -25,7 +25,7 @@
 
 ## License
 
-[GPL V2](./LISCENSE)
+[GPL V2](./LICENSE)
 
 ## Author
 
