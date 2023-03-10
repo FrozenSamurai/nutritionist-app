@@ -184,6 +184,7 @@ const EditFoodItems = () => {
                 data={rows}
                 export={false}
                 print={false}
+                filterPlaceholder="Search"
                 // filterDigit={1}
                 // exportToXlsx={false}
               >
