@@ -12,7 +12,7 @@ const UserInfo = ({
 
   var t = new Date(Number(userCred.reloadUserInfo.lastLoginAt));
 
-  let date = new Intl.DateTimeFormat("en-US", {
+  let date = new Intl.DateTimeFormat("en-UK", {
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
@@ -30,7 +30,11 @@ const UserInfo = ({
     >
       <div className="w-fit px-10 bg-white rounded-2xl h-2/4 flex justify-start items-center flex-col py-5">
         <img
-          src="/assets/profile.png"
+          src={
+            userDetails.gender === "Female"
+              ? "/assets/profile.png"
+              : "/assets/profile_male.png"
+          }
           alt="Profile Pic"
           className="w-40 h-40 rounded-full object-contain border-2 border-black"
         />
@@ -47,7 +51,19 @@ const UserInfo = ({
           {userDetails.email}
         </h1>
         <button
-          className="mt-5 border-black border-2 px-3 py-1 rounded-lg hover:bg-slate-100"
+          className="mt-2.5 active:scale-95 focus:outline-none bg-[#ff4b2b] hover:bg-[#ff426b]"
+          style={{
+            borderRadius: "20px",
+            border: "1px solid #ff4b2b",
+            // backgroundColor: "#ff4b2b",
+            color: "#000",
+            fontSize: "12px",
+            fontWeight: "bold",
+            padding: "12px 45px",
+            letterSpacing: "1px",
+            textTransform: "uppercase",
+            transition: "transform 80ms ease-in",
+          }}
           onClick={() => {
             setShowModal(true);
           }}

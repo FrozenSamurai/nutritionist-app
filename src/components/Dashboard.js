@@ -33,9 +33,10 @@ const Dashboard = ({
   };
   return (
     <div
-      className="w-full bg-slate-300 h-screen flex justify-center relative items-center bg-no-repeat bg-cover"
+      className="w-full h-screen flex justify-center relative items-center bg-no-repeat bg-cover"
       style={{
         backgroundImage: "url(assets/background.jpg)",
+        backgroundColor: "black",
       }}
     >
       <div className="flex w-3/4 border-white shadow-slate-900 shadow-xl bg-opacity-95 bg-white rounded-3xl h-5/6 flex-col justify-start items-center px-10">

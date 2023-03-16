@@ -30,26 +30,28 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // User is signed in, see docs for a list of available properties
-        setUserCred(user);
-        setIsSignedIn(true);
-        const db = getDatabase();
-        onValue(ref(db, `/users/${user.uid}`), (snapshot) => {
-          const data = snapshot.val();
-          console.log(data);
-          setUserDetails(data);
-          navigate("/dashboard");
-        });
-        // ...
-      } else {
-        // User is signed out
-        setIsSignedIn(false);
-        navigate("/signin");
-        // ...
-      }
-    });
+    if (window.innerWidth > 450) {
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // User is signed in, see docs for a list of available properties
+          setUserCred(user);
+          setIsSignedIn(true);
+          const db = getDatabase();
+          onValue(ref(db, `/users/${user.uid}`), (snapshot) => {
+            const data = snapshot.val();
+            console.log(data);
+            setUserDetails(data);
+            navigate("/dashboard");
+          });
+          // ...
+        } else {
+          // User is signed out
+          setIsSignedIn(false);
+          navigate("/signin");
+          // ...
+        }
+      });
+    }
   }, []);
 
   return (
@@ -59,8 +61,11 @@ function App() {
         path="/"
         element={
           <>
-            <div className="w-screen h-screen flex justify-center items-center">
+            <div className="xl:flex hidden w-screen h-screen justify-center items-center">
               <BarLoader color="#000" loading={true} size={150} />
+            </div>
+            <div className="flex xl:hidden w-screen h-screen justify-center items-center font-semibold text-xl">
+              Please Use a Bigger screen or Laptop.
             </div>
           </>
         }
@@ -75,6 +80,7 @@ function App() {
           />
         }
       />
+
       {/* <Route
         path="/home"
         element={

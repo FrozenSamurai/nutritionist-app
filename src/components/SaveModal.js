@@ -95,6 +95,7 @@ const SaveModal = ({
                     name="Shweta"
                     value="Shweta"
                     id="Shweta"
+                    checked={shweta}
                     className="cursor-pointer"
                     onChange={(e) => {
                       setShweta(e.target.checked);
@@ -114,6 +115,7 @@ const SaveModal = ({
                     value="Sakshi"
                     id="Sakshi"
                     className="cursor-pointer"
+                    checked={sakshi}
                     onChange={(e) => {
                       setSakshi(e.target.checked);
                     }}
@@ -131,6 +133,7 @@ const SaveModal = ({
                     name="Niyati"
                     value="Niyati"
                     id="Niyati"
+                    checked={niyati}
                     className="cursor-pointer"
                     onChange={(e) => {
                       setNiyati(e.target.checked);

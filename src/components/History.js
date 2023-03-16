@@ -118,17 +118,22 @@ const History = ({ userDetails, userCred, setCurrentData, currentData }) => {
   ];
 
   useEffect(() => {
-    const db = getDatabase();
-    onValue(ref(db, `/${userDetails.name}`), (snapshot) => {
-      const data2 = snapshot.val();
-      console.log(data2);
-      setHistoryData(data2);
+    if (userDetails.role === "friend") {
+      const db = getDatabase();
+      onValue(ref(db, `/${userDetails.name}`), (snapshot) => {
+        const data2 = snapshot.val();
+        // console.log(data2);
+        setHistoryData(data2);
+        setLoading(false);
+      });
+    } else {
+      setHistoryData({});
       setLoading(false);
-    });
-
+      setNoData(true);
+    }
     setTimeout(() => {
       setNoData(true);
-    }, 10000);
+    }, 5000);
   }, []);
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-center mt-10">
@@ -157,6 +162,15 @@ const History = ({ userDetails, userCred, setCurrentData, currentData }) => {
         <>
           <h1 className="text-3xl font-semibold">History</h1>
           <h1 className="text-3xl font-semibold">No Data Found</h1>
+          <h1>
+            Please Write an Email to{" "}
+            <a
+              href={`mailto:rajjdhv2001@gmail.com?subject=Nutritionist App Subscription.&body=Need History of my Recalls. Username: ${userDetails.name}`}
+            >
+              <span className="text-blue-500">rajjdhv2001@gmail.com</span>
+            </a>{" "}
+            to Get History.
+          </h1>
         </>
       ) : (
         <ClockLoader color="#000" />
