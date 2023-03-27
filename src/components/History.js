@@ -136,10 +136,10 @@ const History = ({ userDetails, userCred, setCurrentData, currentData }) => {
     }, 5000);
   }, []);
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center mt-10">
+    <div className="w-full min-h-screen flex flex-col items-center justify-center ">
       {rows.length > 0 ? (
         <>
-          <h1 className="text-3xl font-semibold">History</h1>
+          <h1 className="text-3xl font-semibold mt-10">History</h1>
           <div className="">
             <DataTableExtensions
               columns={columns}

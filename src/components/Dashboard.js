@@ -1,126 +1,136 @@
 import React, { useEffect, useState } from "react";
-import { FaHistory } from "react-icons/fa";
+import { FaHistory, FaPlus } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { getAuth, signOut } from "firebase/auth";
 import AddFoodItem from "./AddFoodItem";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Dashboard = ({
   userDetails,
   setIsSignedIn,
   setCurrentData,
   setAllEnteredData,
+  userCred,
 }) => {
   const [addFoodItem, setAddFoodItem] = useState(false);
   const navigate = useNavigate();
-  const auth = getAuth();
 
   useEffect(() => {
     setCurrentData({});
     setAllEnteredData({});
   }, []);
 
-  const handleLogout = () => {
-    signOut(auth)
-      .then(() => {
-        // Sign-out successful.
-        setIsSignedIn(false);
-        navigate("/signin");
-      })
-      .catch((error) => {
-        // An error happened.
-        alert(error.message);
-      });
-  };
   return (
-    <div
-      className="w-full h-screen flex justify-center relative items-center bg-no-repeat bg-cover"
-      style={{
-        backgroundImage: "url(assets/background.jpg)",
-        backgroundColor: "black",
-      }}
-    >
-      <div className="flex w-3/4 border-white shadow-slate-900 shadow-xl bg-opacity-95 bg-white rounded-3xl h-5/6 flex-col justify-start items-center px-10">
-        <div className=" w-full h-fit flex flex-col justify-center items-center relative">
-          <div className="w-fit flex flex-row h-fit mt-10">
-            <h1 className="text-center text-3xl text-blue-500 ">
-              Welcome Back, <strong>{userDetails.name}</strong>{" "}
-            </h1>
-            <img
-              className="cursor-pointer w-10 h-10 animate-spin-slow hover:animate-none "
-              onClick={() => {
-                navigate("/info");
-              }}
-              src="/assets/gear.png"
-              alt="settings"
-              title="settings"
-            />
-          </div>
-          <div className="absolute top-12 right-5">
-            <button
-              className="px-3 py-1 bg-red-300 hover:bg-red-400 rounded-md hover:scale-110 font-semibold"
-              onClick={() => {
-                handleLogout();
-              }}
-            >
-              LOGOUT
-            </button>
-          </div>
-          <div className="absolute top-12 left-5">
-            <button
-              className="px-3 py-1 bg-orange-300 hover:bg-orange-400 rounded-md hover:scale-110 font-semibold"
-              onClick={() => {
-                navigate("/edit-fooditems");
-              }}
-            >
-              Edit Food Items
-            </button>
-          </div>
-        </div>
-        <hr className="w-full border-2 bg-black border-black mt-5" />
-        <div>
-          <h1 className="text-3xl font-semibold md:mt-5">
-            What you wish to do today
+    <div className="before:w-full before:h-[200vh] before:min-h-fit before:blur-[2px] before:-z-[1000] h-screen min-h-fit  flex flex-col  before:bg-background before:brightness-[60%] before:absolute	 relative items-center  before:bg-cover">
+      {/* <div className=" w-4/5 top-7 fixed"> */}
+      <Navbar
+        userDetails={userDetails}
+        setIsSignedIn={setIsSignedIn}
+        userCred={userCred}
+        setAddFoodItem={setAddFoodItem}
+      />
+      {/* </div> */}
+      <div className="text-white min-h-fit h-fit flex flex-row w-[80%] pt-10 mt-16 px-10">
+        <div className="flex flex-col w-[50%]">
+          <h1 className="text-5xl font-sans font-[350]">
+            Welcome to Nutri-Recall
           </h1>
-        </div>
-        <div className="w-full h-3/5 py-5 relative flex flex-row justify-center space-x-5 px-10 items-center">
-          <div
-            className="w-1/3 shadow-lg h-full border-2 rounded-2xl cursor-pointer hover:scale-105 hover:bg-slate-100 flex flex-col justify-center items-center"
-            onClick={() => {
-              navigate("/main");
-              setCurrentData({});
-              setAllEnteredData({});
-            }}
-          >
-            <img src="/assets/meals.png" alt="meals" className="w-full" />
-            <h1 className="text-2xl font-firaCode mt-5 text-center font-semibold">
-              Create 24 Hrs
-              <br /> Diet Recall
-            </h1>
+          <p className=" mt-5 text-xl font-light">
+            Nutri-Recall is an open-source application that automates the
+            nutrient calculation process for 24-hour diet recalls, saving
+            valuable time for nutritionists and nutritionist students. With the
+            premium version, users can also save dietary data for future
+            reference, providing a comprehensive tool for managing clients'
+            nutritional intake.
+          </p>
+          <div className="flex">
+            {/* button for create new recall */}
+            <button
+              className="mt-10 hover:bg-green-600 rounded-md p-2 px-5 animate- hover:text-white font-bold bg-green-400 text-black  flex flex-row justify-center items-center"
+              onClick={() => {
+                navigate("/new");
+              }}
+            >
+              <FaPlus className="inline-block mr-2" />
+              Create New Recall
+            </button>
+            <button
+              className="mt-10 bg-yellow-400 rounded-md p-2 px-5 hover:text-white font-bold hover:bg-yellow-400 text-black ml-5 flex flex-row justify-center items-center"
+              onClick={() => {
+                navigate("/history");
+              }}
+            >
+              <FaHistory className="inline-block mr-2" />
+              History
+            </button>
           </div>
-          <div className="h-full border-2 bg-gray-200"></div>
-          <div
-            className="w-1/3 shadow-lg h-full border-2 rounded-2xl cursor-pointer hover:scale-105 hover:bg-slate-100 flex flex-col justify-center items-center space-y-3"
-            onClick={() => {
-              navigate("/history");
-              setCurrentData({});
-              setAllEnteredData({});
-            }}
-          >
-            <FaHistory size={220} />
-            <h1 className="text-2xl text-center font-firaCode mt-5 font-semibold">
-              Check Diet Recalls History
-            </h1>
-          </div>
-          <button
-            className="px-2 py-1 absolute bg-blue-400 hover:bg-blue-300 -bottom-7 rounded-md hover:scale-105"
-            onClick={() => {
-              setAddFoodItem(true);
-            }}
-          >
-            Add New Food Item
-          </button>
         </div>
       </div>
+      <div className="w-full bg-white flex justify-center mt-5">
+        <div className="w-[80%] px-10 p-10 flex flex-col space-y-3">
+          <h1 className="text-3xl font-thin">Summary</h1>
+          <p className="w-[80%] text-base">
+            Welcome to our web app designed specifically for nutritionists and
+            nutritionist students! <br />
+            <br />
+            As a nutritionist or nutritionist student, you understand the
+            importance of taking 24-hour diet recalls of your subjects. However,
+            the task of manually calculating the nutrient values of the recalled
+            foods can be time-consuming and tedious.
+            <br />
+            <br /> Our web app streamlines this process by automating the
+            nutrient calculation part, saving you valuable time and effort.
+            Simply input the recalled foods into the app, and it will provide
+            you with the nutrient values for each food item, as well as the
+            total nutrient intake for the day.
+            <br />
+            <br /> In addition to automating nutrient calculations, our app
+            allows you to download your work for easy access and sharing. This
+            feature enables you to organize and keep track of your clients'
+            dietary information with ease, as well as share your work with
+            colleagues and supervisors.
+            <br />
+            <br /> Overall, our web app is a must-have tool for nutritionists
+            and nutritionist students who want to simplify the nutrient
+            calculation process and enhance their work efficiency. Try it today
+            and experience the benefits for yourself!
+          </p>
+          <h1 className="text-3xl font-thin pt-3">Premium Features</h1>
+          <p className="w-[80%] text-base">
+            Our premium version of the web app offers an additional feature that
+            will make the lives of nutritionists and nutritionist students even
+            easier - the ability to save 24-hour diet recalls for future
+            reference.
+            <br />
+            <br /> With this feature, you can save the nutrient values of a
+            client's dietary intake in the app, enabling you to access it at any
+            time in the future. This means that you will no longer need to
+            re-enter the recalled foods each time you need to calculate the
+            nutrient values, as the app will have already stored the information
+            for you.
+            <br />
+            <br /> This feature is particularly useful for nutritionists and
+            nutritionist students who work with clients over extended periods or
+            have clients with ongoing dietary issues. By having access to
+            historical dietary data, you can monitor the progress of your
+            clients' nutritional intake over time and identify trends or
+            patterns that could impact their overall health and wellbeing.
+            <br />
+            <br />
+            Additionally, the ability to save 24-hour diet recalls also helps
+            you to maintain accurate records and compliance with legal and
+            ethical requirements, such as data protection laws.
+            <br />
+            <br /> Overall, our premium version of the app provides an efficient
+            and convenient way to manage your clients' dietary data, enabling
+            you to focus on providing the best possible nutritional advice and
+            support. Try it out today and see how it can transform your
+            workflow!
+          </p>
+        </div>
+      </div>
+      <hr />
+      <Footer />
       {addFoodItem ? <AddFoodItem setAddFoodItem={setAddFoodItem} /> : <></>}
     </div>
   );

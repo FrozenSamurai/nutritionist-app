@@ -14,6 +14,8 @@ const HistoryRecall = ({ setCurrentData, currentData }) => {
   let [totalFibre, setTotalFibre] = useState(0);
   let [print, setPrint] = useState(false);
 
+  console.log(currentData);
+
   const printref = useRef();
 
   useEffect(() => {

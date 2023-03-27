@@ -66,18 +66,22 @@ const MainScreen = ({
   };
 
   useEffect(() => {
-    const db = getDatabase();
-    const UIDsRef = ref(db, `UIDs`);
-    onValue(UIDsRef, (snapshot) => {
-      const data = snapshot.val();
-      // console.log(data);
-      const arrayOfUIDs = [];
-      Object.keys(data).map((e) => {
-        arrayOfUIDs.push(data[e]);
-        return 0;
+    setCurrentData({});
+    setAllEnteredData({});
+    if (userDetails.role === "friend") {
+      const db = getDatabase();
+      const UIDsRef = ref(db, `UIDs`);
+      onValue(UIDsRef, (snapshot) => {
+        const data = snapshot.val();
+        // console.log(data);
+        const arrayOfUIDs = [];
+        Object.keys(data).map((e) => {
+          arrayOfUIDs.push(data[e]);
+          return 0;
+        });
+        setAllUIDs(arrayOfUIDs);
       });
-      setAllUIDs(arrayOfUIDs);
-    });
+    }
   }, []);
 
   useEffect(() => {
@@ -142,7 +146,7 @@ const MainScreen = ({
         <h1 className="text-3xl w-full text-center font-semibold">
           Nutrition Tracker
         </h1>
-        <div className="w-fit flex-wrap space-x-2 flex text-lg">
+        <div className="w-fit flex-wrap space-x-2 justify-center flex text-lg">
           <div className="w-fit flex-row flex pr-2 border-r-2">
             <h1 className="cursor-default font-semibold">
               Unique ID

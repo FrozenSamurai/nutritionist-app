@@ -36,14 +36,17 @@ const SaveModal2 = ({
 
       set(ref(db, `${userDetails.name}/${uid}`), {
         ...dataToPush,
-      }).then(setLoading(false));
+      }).then(() => {
+        setLoading(false);
+      });
 
       //once everything is completed navigate
-      const UIDsuid = push(child(ref(db), "UIDs")).key;
-      set(ref(db, `UIDs/${UIDsuid}`), uid);
-      navigate("/dashboard");
-      setAllEnteredData({});
-      setCurrentData({});
+      // const UIDsuid = push(child(ref(db), "UIDs")).key;
+      // set(ref(db, `UIDs/${UIDsuid}`), uid);
+      navigate("/history-recall");
+
+      // setAllEnteredData({});
+      setCurrentData({ ...dataToPush, Uid: uid });
       alert("Data Saved Successfully.");
     } else {
       setError(true);
@@ -88,7 +91,7 @@ const SaveModal2 = ({
                     }}
                   />
                   <label
-                    for="confirm"
+                    htmlFor="confirm"
                     className="font-bold cursor-pointer ml-0.5"
                   >
                     This is the <strong>Final Recall</strong> and{" "}
@@ -124,7 +127,7 @@ const SaveModal2 = ({
                   setLoading(true);
                 }}
               >
-                Save Changes
+                Save as pdf
               </button>
             </div>
           </div>

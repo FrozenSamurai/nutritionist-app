@@ -9,6 +9,9 @@ module.exports = {
       animation: {
         "spin-slow": "spin 3s linear infinite",
       },
+      backgroundImage: {
+        background: "url(assets/background.jpg)",
+      },
     },
   },
   plugins: [],

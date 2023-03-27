@@ -28,7 +28,7 @@ const UserInfo = ({
         backgroundImage: "url(assets/background.jpg)",
       }}
     >
-      <div className="w-fit px-10 bg-white rounded-2xl h-2/4 flex justify-start items-center flex-col py-5">
+      <div className="w-fit px-10 bg-white rounded-2xl h-fit flex justify-start items-center flex-col py-5">
         <img
           src={
             userDetails.gender === "Female"

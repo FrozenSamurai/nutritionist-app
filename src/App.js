@@ -17,7 +17,7 @@ import EditMain from "./components/editOption/EditMain";
 import UserInfo from "./components/UserInfo";
 
 function App() {
-  const db = getDatabase(app);
+  // const db = getDatabase(app);
   const auth = getAuth(app);
 
   const [nutrients, setNutrients] = useState({});
@@ -113,7 +113,7 @@ function App() {
         }
       />
       <Route
-        path="/main"
+        path="/new"
         element={
           <Protected isSignedIn={isSignedIn}>
             <MainScreen
@@ -140,6 +140,7 @@ function App() {
               currentData={currentData}
               allEnteredData={allEnteredData}
               setAllEnteredData={setAllEnteredData}
+              userCred={userCred}
             />
           </Protected>
         }
@@ -195,6 +196,14 @@ function App() {
               setAllEnteredData={setAllEnteredData}
             />
           </Protected>
+        }
+      />
+      <Route
+        path="/help"
+        element={
+          <div className="w-screen h-screen flex justify-center items-center">
+            Coming Soon...
+          </div>
         }
       />
     </Routes>
