@@ -15,6 +15,7 @@ import HistoryRecall from "./components/HistoryRecall";
 import EditFoodItems from "./components/EditFoodItems";
 import EditMain from "./components/editOption/EditMain";
 import UserInfo from "./components/UserInfo";
+import Help from "./components/Help";
 
 function App() {
   // const db = getDatabase(app);
@@ -201,9 +202,9 @@ function App() {
       <Route
         path="/help"
         element={
-          <div className="w-screen h-screen flex justify-center items-center">
-            Coming Soon...
-          </div>
+          <Protected isSignedIn={isSignedIn}>
+            <Help />
+          </Protected>
         }
       />
     </Routes>
