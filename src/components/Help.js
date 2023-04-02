@@ -15,6 +15,9 @@ const Help = () => {
         allowfullscreen
         frameborder="0"
         title="Create New Recall"
+        onLoad={() => {
+          setLoading(false);
+        }}
       >
         Loading
       </iframe>
@@ -27,6 +30,9 @@ const Help = () => {
         allowfullscreen
         frameborder="0"
         title="Add New Food Item"
+        onLoad={() => {
+          setLoading(false);
+        }}
       >
         Loading
       </iframe>
@@ -39,6 +45,9 @@ const Help = () => {
         allowfullscreen
         frameborder="0"
         title="Change Login Password"
+        onLoad={() => {
+          setLoading(false);
+        }}
       >
         Loading
       </iframe>
@@ -72,9 +81,9 @@ const Help = () => {
                   setInview(key);
                   if (key !== inview) {
                     setLoading(true);
-                    setTimeout(() => {
-                      setLoading(false);
-                    }, 4000);
+                    // setTimeout(() => {
+                    //   setLoading(false);
+                    // }, 4000);
                   }
                 }}
               >
@@ -93,7 +102,7 @@ const Help = () => {
           Go back
         </button>
       </div>
-      <div className="w-4/5 h-fit min-h-screen overflow-y-auto">
+      <div className="w-4/5 h-fit flex min-h-screen overflow-y-auto relative">
         {inview ? (
           navigationPannel[inview]
         ) : (
@@ -101,13 +110,13 @@ const Help = () => {
             <h1 className="text-xl">Select a topic from the left panel</h1>
           </div>
         )}
+        {loading && (
+          <div className="absolute z-[1000] w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-center">
+            <MoonLoader color="#fff" />
+            <h1 className="text-2xl text-white font-semibold">Loading...</h1>
+          </div>
+        )}
       </div>
-      {loading && (
-        <div className="fixed z-[1000] w-screen h-screen bg-black bg-opacity-50 flex flex-col justify-center items-center">
-          <MoonLoader color="#fff" />
-          <h1 className="text-2xl text-white font-semibold">Loading...</h1>
-        </div>
-      )}
     </div>
   );
 };
