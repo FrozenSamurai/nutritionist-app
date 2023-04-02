@@ -31,10 +31,11 @@ const MainScreen = ({
   let [allUIDs, setAllUIDs] = useState([]);
   let [uid, setUid] = useState("");
   let [age, setAge] = useState(0);
-  let [height, setHeight] = useState("");
+  let [height, setHeight] = useState(0);
   let [weight, setWeight] = useState(0);
   let [gender, setGender] = useState("");
   let [errors, setErrors] = useState();
+  let [BMI, setBMI] = useState(null);
   const [addFoodItem, setAddFoodItem] = useState(false);
 
   const HandleGrandTotals = () => {
@@ -113,8 +114,17 @@ const MainScreen = ({
     // setMealnum(mealnum - 1);
   };
 
+  useEffect(() => {
+    //calculatr BMI
+    if (height > 0 && weight > 0) {
+      let heightInMeters = height / 100;
+      let bmi = weight / (heightInMeters * heightInMeters);
+      setBMI(bmi.toFixed(2));
+    }
+  }, [height, weight, BMI]);
+
   const HandleSave = () => {
-    if (uid !== "" && age > 0 && height !== "" && weight > 0 && gender !== "") {
+    if (uid !== "" && age > 0 && height > 0 && weight > 0 && gender !== "") {
       setErrors(null);
       setShowModal(true);
     } else {
@@ -142,6 +152,21 @@ const MainScreen = ({
 
   return (
     <div className="w-full flex flex-col justify-center items-center mt-10 relative pb-10">
+      {BMI && height && weight && (
+        <div
+          className={`${
+            BMI < 18.5
+              ? "bg-yellow-200"
+              : BMI > 24.9
+              ? BMI > 30
+                ? "bg-red-400"
+                : "bg-red-200"
+              : "bg-green-200"
+          } px-3 py-2 absolute top-0 right-10`}
+        >
+          <h1 className="text-2xl font-semibold"> BMI : {BMI}</h1>
+        </div>
+      )}
       <div className="w-full flex flex-col items-center space-y-5 mb-5">
         <h1 className="text-3xl w-full text-center font-semibold">
           Nutrition Tracker
@@ -200,10 +225,11 @@ const MainScreen = ({
               :
             </h1>
             <input
-              type="text"
+              type="number"
+              placeholder="in cm"
               className="border-b-2 w-20 text-center border-black px-2 ml-2"
               onChange={(e) => {
-                setHeight(e.target.value.trim());
+                setHeight(e.target.value);
               }}
             />
           </div>
