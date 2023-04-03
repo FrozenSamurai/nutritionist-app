@@ -13,7 +13,7 @@ const HistoryRecall = ({ setCurrentData, currentData }) => {
   let [totalIron, setTotalIron] = useState(0);
   let [totalFibre, setTotalFibre] = useState(0);
   let [print, setPrint] = useState(false);
-
+  const [BMI, setBMI] = useState(null);
   console.log(currentData);
 
   const printref = useRef();
@@ -44,6 +44,13 @@ const HistoryRecall = ({ setCurrentData, currentData }) => {
     setTotalFibre(fib);
     setTotalIron(iro);
     setTotalProtine(pro);
+    const height = parseFloat(currentData.Height);
+    const weight = parseFloat(currentData.Weight);
+    console.log(height, weight);
+    let heightInMeters = height / 100;
+    let bmi = weight / (heightInMeters * heightInMeters);
+    setBMI(bmi.toFixed(2));
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -78,6 +85,21 @@ const HistoryRecall = ({ setCurrentData, currentData }) => {
         className="w-full h-full  overflow-x-hidden relative flex flex-col space-y-5  justify-center items-center"
         ref={printref}
       >
+        {BMI && false && (
+          <div
+            className={`${
+              BMI < 18.5
+                ? "bg-yellow-200"
+                : BMI > 24.9
+                ? BMI > 30
+                  ? "bg-red-400"
+                  : "bg-red-200"
+                : "bg-green-200"
+            } px-3 py-2 absolute top-10 right-10`}
+          >
+            <h1 className="text-lg font-semibold"> BMI : {BMI}</h1>
+          </div>
+        )}
         {!print && (
           <button
             className="absolute top-10 right-10 bg-red-500 rounded-md p-2 px-5 text-white font-bold hover:bg-red-400 hover:text-black md:block hidden"
@@ -122,6 +144,19 @@ const HistoryRecall = ({ setCurrentData, currentData }) => {
             <span className="border-2 border-black px-5 rounded-md">
               {currentData.Gender}
             </span>
+          </div>
+          <div
+            className={`${
+              BMI < 18.5
+                ? "bg-yellow-200"
+                : BMI > 24.9
+                ? BMI > 30
+                  ? "bg-red-400"
+                  : "bg-red-200"
+                : "bg-green-200"
+            } px-3 py-2 `}
+          >
+            <h1 className="text-lg font-semibold"> BMI : {BMI}</h1>
           </div>
         </div>
         <hr className="border-slate-200 border-2 bg-slate-200  w-full  px-10" />
