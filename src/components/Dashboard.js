@@ -21,7 +21,7 @@ const Dashboard = ({
   }, []);
 
   return (
-    <div className="before:w-full before:h-[120vh] before:min-h-fit before:blur-[2px] before:-z-[1000] h-screen min-h-fit  flex flex-col  before:bg-background before:brightness-[60%] before:absolute	 relative items-center  before:bg-cover">
+    <div className="before:w-full before:h-full before:min-h-fit before:blur-[2px] before:-z-[1000] h-fit min-h-fit  flex flex-col  before:bg-background before:brightness-[60%] before:absolute	 relative items-center  before:bg-cover">
       {/* <div className=" w-4/5 top-7 fixed"> */}
       <Navbar
         userDetails={userDetails}
