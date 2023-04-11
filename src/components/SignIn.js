@@ -111,6 +111,9 @@ const SignIn = ({ setUserDetails, setUserCred, setIsSignedIn }) => {
         backgroundImage: "url(assets/background.jpg)",
       }}
     >
+      <h1 className="absolute top-0 left-0 text-black font-extralight text-[8px]">
+        Zoom Out
+      </h1>
       <div className="container my-5" id="container">
         <div
           className="form-container sign-up-container"
